@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBUtils\DBHelper.cs" />
     <Compile Include="Form_A\Form_A_1.cs" />
     <Compile Include="Form_A\Form_A_2.cs" />
     <Compile Include="Form_A\Form_A_2_1.cs" />
@@ -62,6 +61,8 @@
     <Compile Include="Form_A\Form_A_5_1.cs" />
     <Compile Include="Form_A\Form_A_5_2.cs" />
     <Compile Include="Form_A\Form_A_6.cs" />
+    <Compile Include="Form_B\Form_14_1.cs" />
+    <Compile Include="Form_B\Form_B_1 _3.cs" />
     <Compile Include="Form_B\Form_B_1.cs" />
     <Compile Include="Form_B\Form_B_10.cs" />
     <Compile Include="Form_B\Form_B_11.cs" />
@@ -71,8 +72,25 @@
     <Compile Include="Form_B\Form_B_15.cs" />
     <Compile Include="Form_B\Form_B_16.cs" />
     <Compile Include="Form_B\Form_B_17.cs" />
+    <Compile Include="Form_B\Form_B_17_1.cs" />
     <Compile Include="Form_B\Form_B_18.cs" />
+    <Compile Include="Form_B\Form_B_18_1.cs" />
     <Compile Include="Form_B\Form_B_19.cs" />
+    <Compile Include="Form_B\Form_B_1_1.cs" />
+    <Compile Include="Form_B\Form_B_1_10.cs" />
+    <Compile Include="Form_B\Form_B_1_11.cs" />
+    <Compile Include="Form_B\Form_B_1_12.cs" />
+    <Compile Include="Form_B\Form_B_1_13.cs" />
+    <Compile Include="Form_B\Form_B_1_14.cs" />
+    <Compile Include="Form_B\Form_B_1_15.cs" />
+    <Compile Include="Form_B\Form_B_1_16.cs" />
+    <Compile Include="Form_B\Form_B_1_17.cs" />
+    <Compile Include="Form_B\Form_B_1_4.cs" />
+    <Compile Include="Form_B\Form_B_1_5.cs" />
+    <Compile Include="Form_B\Form_B_1_6.cs" />
+    <Compile Include="Form_B\Form_B_1_7.cs" />
+    <Compile Include="Form_B\Form_B_1_8.cs" />
+    <Compile Include="Form_B\Form_B_1_9.cs" />
     <Compile Include="Form_B\Form_B_2.cs" />
     <Compile Include="Form_B\Form_B_20.cs" />
     <Compile Include="Form_B\Form_B_3.cs" />
@@ -82,6 +100,7 @@
     <Compile Include="Form_B\Form_B_7.cs" />
     <Compile Include="Form_B\Form_B_8.cs" />
     <Compile Include="Form_B\Form_B_9.cs" />
+    <Compile Include="Form_B\From_B_1_2.cs" />
     <Compile Include="LoginForm\loginForm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

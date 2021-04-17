@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Model.Form_B
 {
-    //X射线荧光元素录井分析记录
-    public class Form_B_18
+    //分析参数
+    public class Form_14_1
     {
-        public double well_depth { get; set; }//井深
+        public string ingredient { get; set; }//组分
+        public double peak_area { get; set; }//峰面积
+
     }
 }

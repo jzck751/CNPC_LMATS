@@ -1,15 +1,7 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
 using System.Data;
-using System.Configuration;
-using System.Windows.Forms;
 
 using MySql.Data.MySqlClient;
-using System.Xml;
-using MySql.Data;
 
 /*
  * Author: Lee
@@ -17,9 +9,9 @@ using MySql.Data;
  * Info: 数据库封装操作类
 */
 
-namespace Common
+namespace DAL.DBUtils
 {
-    public class DbManager
+    public class UserDB
     {
         //连接用的字符串
         private string connStr;
@@ -29,13 +21,32 @@ namespace Common
             set { this.connStr = value; }
         }
 
-        private DbManager() { }
-
-        //DbManager单实例
-        private static DbManager _instance = null;
-        public static DbManager Ins
+        public static MySqlConnection conn;
+        //打开数据库连接
+        public static void OpenConn()
         {
-            get { if (_instance == null) { _instance = new DbManager(); } return _instance; }
+            string SqlCon = "server=localhost;user id=root;password=123456;database=program";
+            conn = new MySqlConnection(SqlCon);
+            conn.Open();
+
+        }
+        //关闭数据库连接
+        public static void CloseConn()
+        {
+            if (conn.State.ToString().ToLower() == "open")
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+        }
+
+        public UserDB() { }
+
+        //UserDB单实例
+        private static UserDB _instance = null;
+        public static UserDB Ins
+        {
+            get { if (_instance == null) { _instance = new UserDB(); } return _instance; }
         }
 
         /// <summary>

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Model.Form_B
 {
-    //X射线荧光元素录井分析记录
-    public class Form_B_18
+    //矿物含量
+    public class Form_B_17_1
     {
-        public double well_depth { get; set; }//井深
+        public double mineral_1_content { get; set; }//矿物1含量
     }
 }
