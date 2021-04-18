@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base_Class\Form_B_threePeak_and_fivePeak.cs" />
     <Compile Include="Form_A\Form_A_1.cs" />
     <Compile Include="Form_A\Form_A_2.cs" />
     <Compile Include="Form_A\Form_A_2_1.cs" />
@@ -93,6 +94,7 @@
     <Compile Include="Form_B\Form_B_1_9.cs" />
     <Compile Include="Form_B\Form_B_2.cs" />
     <Compile Include="Form_B\Form_B_20.cs" />
+    <Compile Include="Form_B\Form_B_2_1.cs" />
     <Compile Include="Form_B\Form_B_3.cs" />
     <Compile Include="Form_B\Form_B_4.cs" />
     <Compile Include="Form_B\Form_B_5.cs" />
