@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base_Class\Form_B_threePeak_and_fivePeak.cs" />
+    <Compile Include="Base_Class\lithology_and_oil-gas-water_fluorescence.cs" />
     <Compile Include="Form_A\Form_A_1.cs" />
     <Compile Include="Form_A\Form_A_2.cs" />
     <Compile Include="Form_A\Form_A_2_1.cs" />
