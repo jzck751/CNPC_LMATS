@@ -9,9 +9,7 @@ namespace Model.LoginForm
     public class loginForm
     {
         public string user_id { get; set; }
-        public string Account { get; set; }
         public string user_name { get; set; }
         public string user_pwd { get; set; }
-        public string Time { get; set; }
     }
 }

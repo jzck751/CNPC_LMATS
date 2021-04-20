@@ -13,7 +13,6 @@ namespace DAL.DBUtils
 {
     public class UserDB
     {
-
         //连接用的字符串
         private string connStr;
         public string ConnStr
@@ -26,7 +25,7 @@ namespace DAL.DBUtils
         //打开数据库连接
         public static void OpenConn()
         {
-            string SqlCon = "server=localhost;user id=root;password=;database=program";
+            string SqlCon = "server=localhost;user id=root;password=123456;database=program";
             conn = new MySqlConnection(SqlCon);
             conn.Open();
 
@@ -216,6 +215,6 @@ namespace DAL.DBUtils
                 return dt;
             }
         }
+
     }
-       
 }
