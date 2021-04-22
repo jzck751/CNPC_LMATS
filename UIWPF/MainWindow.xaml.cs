@@ -13,16 +13,20 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace RecordingProject
+
+
+namespace UIWPF
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+            AccountUserName.Content = UIWPF.Resources.Pages.Login.globalUser.UserId; 
         }
 
         #region 标题栏事件

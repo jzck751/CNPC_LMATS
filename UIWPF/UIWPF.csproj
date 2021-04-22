@@ -18,6 +18,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj" />
+    <ProjectReference Include="..\Model\Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="MySQLDriverCS">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQLDriverCS\dll\MySQLDriverCS.dll</HintPath>
     </Reference>

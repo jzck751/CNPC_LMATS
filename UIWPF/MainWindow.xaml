@@ -1,9 +1,9 @@
-﻿<Window x:Class="RecordingProject.MainWindow"
+﻿<Window x:Class="UIWPF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:RecordingProject"
+        xmlns:local="clr-namespace:UIWPF"
         mc:Ignorable="d"
         Title="录井资料采集与整理系统" Height="900" Width="1600"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
@@ -208,7 +208,7 @@
                     </materialDesign:PopupBox>
                     <Rectangle Stroke="White"/>
                     <Label x:Name="AccountUserName"
-                           Content="DefaultUserName"
+                           Content=""
                            Foreground="White"
                            VerticalContentAlignment="Center"
                            Margin="6"/>

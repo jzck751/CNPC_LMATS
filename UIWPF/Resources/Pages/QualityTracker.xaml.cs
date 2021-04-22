@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace RecordingProject.Resources.Pages
+namespace UIWPF.Resources.Pages
 {
     /// <summary>
     /// QualityTracker.xaml 的交互逻辑

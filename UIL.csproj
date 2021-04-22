@@ -115,6 +115,10 @@
       <Project>{07ADF483-030A-4F39-AC5C-E97EFA359236}</Project>
       <Name>BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="Model\Model.csproj">
+      <Project>{01c39a9c-88dd-4c33-abc1-a439c973c71c}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
