@@ -15,6 +15,5 @@ namespace Model.Form_A
         public string measurePerson { get; set; }//丈量人
         public string reviewPerson { get; set; }//复查人
         public string remark { get; set; }//备注
-        public string test { get; set; }//test
     }
 }
