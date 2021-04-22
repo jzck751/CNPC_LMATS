@@ -109,7 +109,7 @@
     <Compile Include="Form_B\Form_B_9.cs" />
     <Compile Include="Form_B\Form_B_9_1.cs" />
     <Compile Include="Form_B\From_B_1_2.cs" />
-    <Compile Include="LoginForm\loginForm.cs" />
+    <Compile Include="LoginForm\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
