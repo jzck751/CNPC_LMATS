@@ -5,7 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="Login" Height="400" Width="600" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
+        Title="Login" 
+        Height="400" 
+        Width="600" 
+        ResizeMode="NoResize" 
+        WindowStyle="None" 
+        AllowsTransparency="True" 
+        Background="Transparent" 
+        WindowStartupLocation="CenterScreen"
+        MouseMove="windowMouseMove" Activated="window_Activated">
 
     <Grid>
         <Rectangle RadiusY="8" RadiusX="8" Fill="White"/>
@@ -80,6 +88,12 @@
         <StackPanel Margin="310,50,0,50">
             <TextBlock Text="录井资料采集与整理系统" Foreground="White" HorizontalAlignment="Center" FontSize="24" FontFamily="Assets/Fonts/#NotoSansSC" FontWeight="Bold"/>
         </StackPanel>
+
+        <Label x:Name="VersionStatement" 
+               HorizontalAlignment="Right"
+               VerticalAlignment="Bottom"
+               Content=""
+               FontSize="8"/>
     </Grid>
 </Window>
 

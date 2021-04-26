@@ -8,6 +8,7 @@ using System.Threading;
 using BLL;
 using System.Windows.Threading;
 using static UIWPF.MainWindow;
+using System.Windows.Input;
 
 namespace UIWPF.Resources.Pages
 {
@@ -20,6 +21,17 @@ namespace UIWPF.Resources.Pages
         public Login()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// 窗口移动事件
+        /// </summary>
+        private void windowMouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                this.DragMove();
+            }
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
@@ -128,6 +140,14 @@ namespace UIWPF.Resources.Pages
         private void regist_Click(object sender, RoutedEventArgs e)
         {
            
+        }
+
+        private void window_Activated(object sender, EventArgs e)
+        {
+            Version version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+            string date = $"{DateTime.Now.ToString("yyMMdd")}";
+            string displayableVersion = $"{version}.{date}Alpha";
+            VersionStatement.Content = displayableVersion;
         }
     }
 

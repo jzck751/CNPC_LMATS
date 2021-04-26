@@ -203,6 +203,7 @@
                             <Separator/>
                             <Button Content="登出"
                                     FontFamily="Assets/Fonts/#NotoSansSC"
+                                    Click="sign_out_Click"
                                     />
                         </StackPanel>
                     </materialDesign:PopupBox>
