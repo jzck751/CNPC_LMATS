@@ -37,17 +37,23 @@
                     Width="100"
                     Content="全部选是"
                     Margin="0,0,10,0"
-                    Click="closeWithSave"/>
+                    Click="closeWithSave" 
+                    Background="#FF307CD6" 
+                    BorderBrush="#FF307CD6"/>
             <Button Style ="{StaticResource MaterialDesignRaisedButton}"
                     Width="100"
                     Content="全部选否"
                     Margin="0,0,10,0"
-                    Click="closeWithSave"/>
+                    Click="closeWithSave"
+                    Background="#FF307CD6" 
+                    BorderBrush="#FF307CD6"/>
             <Button Style ="{StaticResource MaterialDesignRaisedButton}"
                     Width="100"
                     Content="取消"
                     Margin="0,0,20,0"
-                    Click="cancel_Click"/>
+                    Click="cancel_Click"
+                    Background="#FF307CD6" 
+                    BorderBrush="#FF307CD6" Cursor="Hand"/>
 
         </StackPanel>
     </Grid>

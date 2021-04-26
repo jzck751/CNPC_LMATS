@@ -27,7 +27,7 @@ namespace UIWPF
         {
             InitializeComponent();
             AccountUserName.Content = UIWPF.Resources.Pages.Login.globalUser.UserId;
-            
+            AppFrame.JournalOwnership = JournalOwnership.OwnsJournal;
         }
 
         #region 标题栏事件
@@ -124,6 +124,7 @@ namespace UIWPF
             }
         }
 
+        int flag = 0;
         private void MenuSwitcher(object sender, RoutedEventArgs e)
         {
             var button = sender as RadioButton;
@@ -132,18 +133,35 @@ namespace UIWPF
                 switch(button.Name)
                 {
                     case "DataCollection":
-                        this.AppFrame.Navigate(typeof(Resources.Pages.DataCollection));
+                        this.AppFrame.Navigate(new Resources.Pages.DataCollection());
+                        firstClickCtrl();
                         break;
                     case "DataCollation":
-                        this.AppFrame.Navigate(typeof(Resources.Pages.DataCollation));
+                        this.AppFrame.Navigate(new Resources.Pages.DataCollation());
+                        firstClickCtrl();
                         break;
                     case "QualityTracker":
-                        this.AppFrame.Navigate(typeof(Resources.Pages.QualityTracker));
+                        this.AppFrame.Navigate(new Resources.Pages.QualityTracker());
+                        firstClickCtrl();
                         break;
                     default:
                         MessageBox.Show("Failed to load the page.");
                         break;
                 }
+            }
+            flag = 1;
+        }
+
+        // Avoid Exception when the first click happens
+        private void firstClickCtrl()
+        {
+            if(flag == 0)
+            {
+                return;
+            }
+            else
+            {
+                AppFrame.RemoveBackEntry();
             }
         }
 

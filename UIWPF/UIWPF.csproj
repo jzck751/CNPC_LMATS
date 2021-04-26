@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\images\baseline_waving_hand_black_48.png" />
     <None Remove="favicon.ico" />
   </ItemGroup>
 
@@ -28,6 +29,10 @@
     <Reference Include="MySQLDriverCS">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQLDriverCS\dll\MySQLDriverCS.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\images\baseline_waving_hand_black_48.png" />
   </ItemGroup>
 
   <ItemGroup>

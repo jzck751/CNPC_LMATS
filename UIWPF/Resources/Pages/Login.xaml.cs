@@ -111,6 +111,7 @@ namespace UIWPF.Resources.Pages
                                 accRemBox.IsEnabled = true;
                                 storyboard.Stop();
                                 storyboard1.Stop();
+                                psw.Password = null;
                             }));
                     }
                     //catch (TimeoutException)
