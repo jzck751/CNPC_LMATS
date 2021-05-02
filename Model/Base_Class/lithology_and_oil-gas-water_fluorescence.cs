@@ -20,7 +20,7 @@ namespace Model.Base_Class
         //荧光
         public string wet_according_to_color { get; set; }//湿照颜色
         public string according_to_the_color { get; set; }//滴照颜色
-        public string do_according_to_color { get; set; }//干照颜色
+        public string dry_according_to_color { get; set; }//干照颜色
         public string contrast_level { get; set; }//对比级别
     }
 }

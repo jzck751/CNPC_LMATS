@@ -21,5 +21,6 @@ namespace Model.Form_B
         public string Logging_captain { get; set; }//录井队长
         public string geological_supervision{ get; set; }//地质监督
 
+
     }
 }

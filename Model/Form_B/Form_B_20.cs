@@ -10,8 +10,8 @@ namespace Model.Form_B
     public class Form_B_20:Form_A.Form_A_6
     {
         public double size { get; set; }//尺寸
-        public double tired_of_long { get; set; }//累长
-        public double under_the_deep { get; set; }//下深
+        public double total_of_length { get; set; }//累长
+        public double under_the_depth { get; set; }//下深
 
     }
 }

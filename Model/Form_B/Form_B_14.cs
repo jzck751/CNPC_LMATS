@@ -15,6 +15,8 @@ namespace Model.Form_B
         public int sample_no { get; set; }//样品编号
         public string sample_type { get; set; }//样品类别
         public double sample_mass { get; set; }//样品质量
+        public string ingredients { get; set; }//组分
+        public double peakAreas { get; set; }//峰面积
 
     }
 }

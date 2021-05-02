@@ -17,7 +17,7 @@ namespace Model.Form_A
         public string Line_delay_time { get; set; }//管路延迟时间
         public string measured_lateness_time { get; set; }//实测时间
         public string Adopt_late_time { get; set; }//采用迟到时间
-        public string Adopt_late_time { get; set; }//采用迟到时间
+        //public string Adopt_late_time { get; set; }//采用迟到时间
         public string adopt_well_depth { get; set; }//采用井深
         public string measurePerson { get; set; }//测量人
         public string verifyPerson { get; set; }//审核人
