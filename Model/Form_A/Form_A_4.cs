@@ -10,9 +10,9 @@ namespace Model.Form_A
     public class Form_A_4
     {
         public string region { get; set; }//地区
-        public string  well_no{ get; set; }//丼别
+        public int  well_no{ get; set; }//丼别
         public string spud_date{ get; set; }//开钻日期
-        public string finishing_drilling_well_depth{ get; set; }//完钻丼深
+        public double finishing_drilling_well_depth{ get; set; }//完钻丼深
         public string finishing_drilling_date { get; set; }//完钻日期
         public string finishing_drilling_position { get; set; }//完钻层位
         public string trim_status { get; set; }//现场整理、取样及保管情况
@@ -25,21 +25,21 @@ namespace Model.Form_A
         public string acceptance_of_the_unit_date{ get; set; }//验收时间
 
         //岩屑
-        public string well_section { get; set; }//井段
+        public double rock_cuttings_well_depth_to_depth { get; set; }//井段
         public string box { get; set; }//盒
         public string package { get; set; }//包
 
         //井壁取芯
-        public string well_depth { get; set; }//井段
-        public int the_number { get; set; }//颗数
-        public string coring_way { get; set; }//取心方式
+        public string wellWallTakeCore_well_depth { get; set; }//井段
+        public int wellWallTakeCore_sample_number { get; set; }//颗数
+        public string wellWallTakeCore_coring_way { get; set; }//取心方式
 
         //钻井取芯
-        public double well_depth_to_depth { get; set; }//井段（深）
-        public double core_diameter { get; set; }//岩心直径
-        public int coring_coefficient { get; set; }//取心此数
-        public double the_length_of_the_core { get; set; }//岩心长度
-        public int box_number { get; set; }//盒数
+        public double drill_well_well_depth_to_depth { get; set; }//井段（深）
+        public double drill_well_core_diameter { get; set; }//岩心直径
+        public int drill_well_coring_coefficient { get; set; }//取心此数
+        public double drill_well_the_length_of_the_core { get; set; }//岩心长度
+        public int drill_well_box_number { get; set; }//盒数
 
     }
 }

@@ -9,7 +9,7 @@ namespace Model.Form_B
     //工程异常报告单
     public class Form_B_8
     {
-        public string well_no { get; set; }//丼号
+        public int well_no { get; set; }//丼号
         public string date_time { get; set; }//日期
         public string well_log_team{ get; set; }//录井队
         public string well_drill_team { get; set; }//钻井队
@@ -26,7 +26,7 @@ namespace Model.Form_B
         public string report_accord_situation { get; set; }//报告符合情况
         public string well_log_reporter { get; set; }//录井报告人
         public string well_log_header_signature { get; set; }//录井队长签字
-        public string well_drill_team_or_the_supervise { get; set; }//钻井队或监督签字
+        public string well_drill_team_or_the_supervise_signature { get; set; }//钻井队或监督签字
         public string geology_supervise_signature { get; set; }//地质监督签字
 
     }

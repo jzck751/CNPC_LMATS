@@ -15,8 +15,8 @@ namespace Model.Form_B
         public string the_lithology_named { get; set; }//岩性定名
 
         //测量值
-        public double L1 { get; set; }//L1
-        public double L2 { get; set; }//L2
-        public double density { get; set; }//密度
+        public double measure_value_L1 { get; set; }//L1
+        public double measure_value_L2 { get; set; }//L2
+        public double measure_value_density { get; set; }//密度
     }
 }

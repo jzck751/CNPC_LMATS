@@ -16,7 +16,7 @@ namespace Model.Form_A
         public double Chlorine_root { get; set; }//氯根含量
         public double density { get; set; }//密度
         public double viscosity { get; set; }//粘度
-        public string surveyory { get; set; }//检验人
+        public string reviewPerson { get; set; }//检验人
 
         //取样时间
         public string dateAndMonth { get; set; }//日/月
@@ -50,5 +50,5 @@ namespace Model.Form_A
         //    consume.after_the_titration = consume_2;
         //    consume.consumption = consume_3;
     }
-    }
+    
 }

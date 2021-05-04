@@ -12,7 +12,7 @@ namespace Model.Form_B
         public double well_depth { get; set; }//丼深
         public string position { get; set; }//层位
         public string the_lithology_named { get; set; }//岩性定名
-        public int sample_no { get; set; }//样品编号
+        public int sample_number { get; set; }//样品编号
         public string sample_type { get; set; }//样品类别
         public double sample_mass { get; set; }//样品质量
 
