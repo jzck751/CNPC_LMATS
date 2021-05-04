@@ -24,5 +24,22 @@ namespace Model.Form_A
         public string acceptance_of_the_unit_person{ get; set; }//验收人
         public string acceptance_of_the_unit_date{ get; set; }//验收时间
 
+        //岩屑
+        public string well_section { get; set; }//井段
+        public string box { get; set; }//盒
+        public string package { get; set; }//包
+
+        //井壁取芯
+        public string well_depth { get; set; }//井段
+        public int the_number { get; set; }//颗数
+        public string coring_way { get; set; }//取心方式
+
+        //钻井取芯
+        public double well_depth_to_depth { get; set; }//井段（深）
+        public double core_diameter { get; set; }//岩心直径
+        public int coring_coefficient { get; set; }//取心此数
+        public double the_length_of_the_core { get; set; }//岩心长度
+        public int box_number { get; set; }//盒数
+
     }
 }
