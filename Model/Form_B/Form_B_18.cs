@@ -10,5 +10,8 @@ namespace Model.Form_B
     public class Form_B_18
     {
         public double well_depth { get; set; }//井深
+
+        //元素含量
+        public double element_1_content { get; set; }//元素1含量
     }
 }

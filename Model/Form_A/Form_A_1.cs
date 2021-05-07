@@ -9,8 +9,8 @@ namespace Model.Form_A
     //_____丼钻具丈量记录
     public class Form_A_1
     {
-        public string data { get; set; }//日期
-        public string serialNum { get; set; }//序号
+        public string date { get; set; }//日期
+        public int serialNum { get; set; }//序号
         public double soloLength { get; set; }//单根长度
         public string measurePerson { get; set; }//丈量人
         public string reviewPerson { get; set; }//复查人

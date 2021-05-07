@@ -12,7 +12,7 @@ namespace Model.Form_B
         public double drill_presure { get; set; }//钻压
         public int wheel_revolutions { get; set; }//转盘转数
         public double displacement { get; set; }//排量
-        public double pumping_pressure { get; set; }//泵压
+        public double pumping_presure { get; set; }//泵压
         public double torque { get; set; }//扭矩
         public double hanging_load{ get; set; }//悬重
     }

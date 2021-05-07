@@ -16,5 +16,20 @@ namespace CNPC_LMATS
         {
             InitializeComponent();
         }
+
+        private void mCSForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void 选择表格ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

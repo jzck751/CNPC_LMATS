@@ -9,8 +9,9 @@ namespace Model.Form_B
     //岩心分块长度及井深校正记录
     public class Form_B_5
     {
-        public int the_number_of_coring { get; set; }//取心此数
-        public int block_number { get; set; }//快号
+        public int the_number_of_coring { get; set; }//取心次数
+        public int total_block_number { get; set; }//总块号
+        public int block_number { get; set; }//块号
         public double block_length { get; set; }//块长
         public double the_cumulative_length_of_the_cylinder { get; set; }//本筒累计长度
         public string crushed_and_polished_surface { get; set; }//破碎及磨光面

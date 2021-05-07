@@ -12,7 +12,7 @@ namespace Model.Base_Class
         public int serial_number { get; set; }//序号
         public double well_depth { get; set; }//井深
         public string the_lithology_named { get; set; }//岩心定名
-        public string samplr_type { get; set; }//样品类型
+        public string sample_type { get; set; }//样品类型
         public double S0 { get; set; }//S0
     }
 }
