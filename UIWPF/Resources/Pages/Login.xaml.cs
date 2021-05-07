@@ -36,6 +36,12 @@ namespace UIWPF.Resources.Pages
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
+            LoginAction();
+
+        }
+
+        private void LoginAction()
+        {
             LoginProgress.IsEnabled = false;
             loginBtn.IsEnabled = false;
             user.IsEnabled = false;
@@ -57,7 +63,7 @@ namespace UIWPF.Resources.Pages
             storyboard1.AutoReverse = true;
             storyboard1.RepeatBehavior = RepeatBehavior.Forever;
             Storyboard.SetTarget(txtAnimation, LoginInfoTxt);
-            Storyboard.SetTargetProperty(txtAnimation,new PropertyPath("(0)",propertyChain));
+            Storyboard.SetTargetProperty(txtAnimation, new PropertyPath("(0)", propertyChain));
             storyboard.Begin();
             storyboard1.Begin();
             AutoResetEvent auto = new AutoResetEvent(false);
@@ -65,64 +71,62 @@ namespace UIWPF.Resources.Pages
             string Password = psw.Password;
 
             Thread loginThread = new Thread(() =>
+            {
+                try
                 {
-                    try
+                    //DispatcherTimer timer = new DispatcherTimer();
+                    //timer.Interval = new TimeSpan(10000000);
+                    //timer.Tick += Timer_Tick;
+                    //timer.Start();
+                    BLL.LoginManager loginManager = new BLL.LoginManager();
+                    auto.WaitOne(2000);
+                    Model.LoginForm.UserInfo userQuest = loginManager.UserLogin(UserId, Password);
+
+                    if (userQuest != null)
                     {
-                        //DispatcherTimer timer = new DispatcherTimer();
-                        //timer.Interval = new TimeSpan(10000000);
-                        //timer.Tick += Timer_Tick;
-                        //timer.Start();
-                        BLL.LoginManager loginManager = new BLL.LoginManager();
-                        auto.WaitOne(2000);
-                        Model.LoginForm.UserInfo userQuest = loginManager.UserLogin(UserId, Password);
-                        
-                        if(userQuest != null)
+                        globalUser = userQuest;
+                        this.Dispatcher.Invoke(
+                        new Action(() =>
                         {
-                            globalUser = userQuest;
-                            this.Dispatcher.Invoke(
-                            new Action(() =>
-                            {
-                                storyboard1.Stop();
-                                LoginInfoTxt.Opacity = 1;
-                                LoginInfoTxt.Content = "欢迎，";
-                                LoginInfoTxt.Content += userQuest.UserId;
-                            }));
-                        }
-                        auto.WaitOne(2000);
-                        
-                        this.Dispatcher.Invoke(
-                            new Action(() =>
-                            {
-                                MainWindow mainWindow = new MainWindow();
-                                mainWindow.Show();
-                                this.Close();
-                            }));
+                            storyboard1.Stop();
+                            LoginInfoTxt.Opacity = 1;
+                            LoginInfoTxt.Content = "欢迎，";
+                            LoginInfoTxt.Content += userQuest.UserId;
+                        }));
                     }
-                    catch(WrongInfoException e)
-                    {
-                        MessageBox.Show("ERR_LOGIN:0001\n用户名或密码不正确，请重新输入。");
-                        this.Dispatcher.Invoke(
-                            new Action(() =>
-                            {
-                                LoginProgress.IsEnabled = true;
-                                loginBtn.IsEnabled = true;
-                                user.IsEnabled = true;
-                                psw.IsEnabled = true;
-                                accRemBox.IsEnabled = true;
-                                storyboard.Stop();
-                                storyboard1.Stop();
-                                psw.Password = null;
-                            }));
-                    }
-                    //catch (TimeoutException)
-                    //{
-                    //    MessageBox.Show("ERR_LOGIN_TIMEOUT:0002");
-                    //}
-                });
-                loginThread.IsBackground = true;
-                loginThread.Start();
-            
-                
+                    auto.WaitOne(2000);
+
+                    this.Dispatcher.Invoke(
+                        new Action(() =>
+                        {
+                            MainWindow mainWindow = new MainWindow();
+                            mainWindow.Show();
+                            this.Close();
+                        }));
+                }
+                catch (WrongInfoException e)
+                {
+                    MessageBox.Show("ERR_LOGIN:0001\n用户名或密码不正确，请重新输入。");
+                    this.Dispatcher.Invoke(
+                        new Action(() =>
+                        {
+                            LoginProgress.IsEnabled = true;
+                            loginBtn.IsEnabled = true;
+                            user.IsEnabled = true;
+                            psw.IsEnabled = true;
+                            accRemBox.IsEnabled = true;
+                            storyboard.Stop();
+                            storyboard1.Stop();
+                            psw.Password = null;
+                        }));
+                }
+                //catch (TimeoutException)
+                //{
+                //    MessageBox.Show("ERR_LOGIN_TIMEOUT:0002");
+                //}
+            });
+            loginThread.IsBackground = true;
+            loginThread.Start();
         }
 
         //private void Timer_Tick(object sender, EventArgs e)
@@ -149,6 +153,22 @@ namespace UIWPF.Resources.Pages
             string date = $"{DateTime.Now.ToString("yyMMdd")}";
             string displayableVersion = $"{version}.{date}Alpha";
             VersionStatement.Content = displayableVersion;
+        }
+
+        private void login(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                LoginAction();
+            }
+        }
+
+        private void user_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                user.MoveFocus(new TraversalRequest(FocusNavigationDirection.Next));
+            }
         }
     }
 

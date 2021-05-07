@@ -22,5 +22,27 @@ namespace UIWPF.Resources.Pages
         {
             InitializeComponent();
         }
+
+        private void search_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+            numSearchPopup.IsOpen = true;
+        }
+
+        private void datePicker_DateChanged(object sender, SelectionChangedEventArgs e)
+        {
+           
+        }
+
+        private void duty_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            dutySearchPopup.IsOpen = true;
+        }
+
+        private void editPanel_Click(object sender, RoutedEventArgs e)
+        {
+            Window editPanelWindow = new Resources.Windows.DataCollection_EditPanel();
+            editPanelWindow.Show();
+        }
     }
 }
