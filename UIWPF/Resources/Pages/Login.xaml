@@ -5,7 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="Login" Height="400" Width="600" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
+        Title="Login" 
+        Height="400" 
+        Width="600" 
+        ResizeMode="NoResize" 
+        WindowStyle="None" 
+        AllowsTransparency="True" 
+        Background="Transparent" 
+        WindowStartupLocation="CenterScreen"
+        Activated="window_Activated">
 
     <Grid>
         <Rectangle RadiusY="8" RadiusX="8" Fill="White"/>
@@ -19,22 +27,60 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
+        <!--DragMoveArea-->
+        <DockPanel VerticalAlignment="Top" 
+                   Height="70" 
+                   MouseMove="windowMouseMove"
+                   Focusable="True">
+            <Label Content=""
+                   MouseMove="windowMouseMove"
+                   />
+        </DockPanel>
         <StackPanel x:Name="mainPnl" Margin="20,10,290,10">
-            <Label Content="用户登录" FontFamily="Segoe UI Black" FontSize="24" Margin="0,10" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <Label Content="用户登录"
+                   FontFamily="Segoe UI Black" 
+                   FontSize="24" Margin="0,10" 
+                   VerticalAlignment="Top" 
+                   HorizontalAlignment="Left"/>
             <StackPanel Orientation="Horizontal">
                 
             </StackPanel>
-            <StackPanel Margin="0,40,0,0" Orientation="Horizontal">
-                <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Foreground="#707070"/>
-                <TextBox x:Name="user" materialDesign:HintAssist.Hint="用户名" Width="250" Margin="5" Cursor="IBeam"/>
+            <StackPanel Margin="0,40,0,0" 
+                        Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Account" 
+                                         VerticalAlignment="Center" 
+                                         Foreground="#707070"/>
+                <TextBox x:Name="user" 
+                         materialDesign:HintAssist.Hint="用户名" 
+                         Width="250" 
+                         Margin="5" 
+                         Cursor="IBeam" KeyDown="user_KeyDown"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Foreground="#707070"/>
-                <PasswordBox x:Name="psw" materialDesign:HintAssist.Hint="密码" Width="250" Margin="5" Cursor="IBeam"/>
+            <StackPanel Orientation="Horizontal" 
+                        Margin="0,10,0,0">
+                <materialDesign:PackIcon Kind="Key" 
+                                         VerticalAlignment="Center" 
+                                         Foreground="#707070"/>
+                <PasswordBox x:Name="psw" 
+                             materialDesign:HintAssist.Hint="密码" 
+                             Width="250" 
+                             Margin="5"
+                             Cursor="IBeam" KeyDown="login">
+                    <PasswordBox.InputBindings>
+                        <KeyBinding Command="{Binding Login_Click}" Key="Enter"/>
+                    </PasswordBox.InputBindings>
+                </PasswordBox>
             </StackPanel>
             <Grid>
-                <CheckBox x:Name="accRemBox" Content="记住账号" Margin="5,10" Foreground="#707070"/>
-                <Label Content="" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" Foreground="#707070"/>
+                <CheckBox x:Name="accRemBox" 
+                          Content="记住账号" 
+                          Margin="5,10" 
+                          Foreground="#707070"/>
+                <Label Content="" 
+                       HorizontalAlignment="Right" 
+                       VerticalAlignment="Center"
+                       Margin="10" 
+                       Foreground="#707070"/>
             </Grid>
 
 
@@ -80,6 +126,12 @@
         <StackPanel Margin="310,50,0,50">
             <TextBlock Text="录井资料采集与整理系统" Foreground="White" HorizontalAlignment="Center" FontSize="24" FontFamily="Assets/Fonts/#NotoSansSC" FontWeight="Bold"/>
         </StackPanel>
+
+        <Label x:Name="VersionStatement" 
+               HorizontalAlignment="Right"
+               VerticalAlignment="Bottom"
+               Content=""
+               FontSize="8"/>
     </Grid>
 </Window>
 

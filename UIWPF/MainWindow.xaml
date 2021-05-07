@@ -18,6 +18,8 @@
         Foreground="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" 
         BorderBrush="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"
         SizeChanged="sizeChanged" 
+        MinHeight="600"
+        MinWidth="1000"
         >
     <Grid>
         <Grid.ColumnDefinitions>
@@ -40,7 +42,8 @@
                 <RadioButton x:Name="DataCollection" 
                              GroupName="Menu"
                              FontFamily="Segoe MDL2 Assets" 
-                             Style="{StaticResource MaterialDesignFlatAccentBgButton}"
+                             Style="{StaticResource MaterialDesignFlatButton}"
+                             materialDesign:RippleAssist.Feedback="#FFD7E4F2"
                              Content="&#xE7AC;" 
                              FontSize="25"
                              Background="Transparent"
@@ -51,7 +54,7 @@
                              Foreground="White" 
                              BorderBrush="{x:Null}" 
                              Height="55"
-                             Click="MenuSwitcher"/>   
+                             Click="MenuSwitcher"/>
                 <TextBlock x:Name="MenuTitle1"
                            Height="10"
                            Text="资料采集"
@@ -59,12 +62,14 @@
                            HorizontalAlignment="Center"
                            FontFamily="Assets/Fonts/#NotoSansSC"
                            FontWeight="Bold"
-                           Margin="0,-12,0,0"/>
+                           Margin="0,-12,0,0" 
+                           Panel.ZIndex="-1"/>
                 <Label/>
                 <RadioButton x:Name="DataCollation" 
                              GroupName="Menu"
                              FontFamily="Segoe MDL2 Assets" 
-                             Style="{StaticResource MaterialDesignFlatAccentBgButton}"
+                             Style="{StaticResource MaterialDesignFlatButton}"
+                             materialDesign:RippleAssist.Feedback="#FFD7E4F2"
                              Content="&#xE81E;" 
                              FontSize="25"
                              Background="Transparent"
@@ -83,12 +88,14 @@
                            HorizontalAlignment="Center"
                            FontFamily="Assets/Fonts/#NotoSansSC"
                            FontWeight="Bold"
-                           Margin="0,-12,0,0"/>
+                           Margin="0,-12,0,0"
+                           Panel.ZIndex="-1"/>
                 <Label/>
                 <RadioButton x:Name="QualityTracker" 
                              GroupName="Menu"
                              FontFamily="Segoe MDL2 Assets" 
-                             Style="{StaticResource MaterialDesignFlatAccentBgButton}"
+                             Style="{StaticResource MaterialDesignFlatButton}"
+                             materialDesign:RippleAssist.Feedback="#FFD7E4F2"
                              Content="&#xE781;" 
                              FontSize="25"
                              Background="Transparent"
@@ -107,9 +114,10 @@
                            HorizontalAlignment="Center"
                            FontFamily="Assets/Fonts/#NotoSansSC"
                            FontWeight="Bold"
-                           Margin="0,-12,0,0"/>
+                           Margin="0,-12,0,0"
+                           Panel.ZIndex="-1"/>
             </StackPanel>
-            
+
 
 
         </DockPanel>
@@ -203,6 +211,7 @@
                             <Separator/>
                             <Button Content="登出"
                                     FontFamily="Assets/Fonts/#NotoSansSC"
+                                    Click="sign_out_Click"
                                     />
                         </StackPanel>
                     </materialDesign:PopupBox>
@@ -213,11 +222,35 @@
                            VerticalContentAlignment="Center"
                            Margin="6"/>
                 </StackPanel>
-                
+
             </Grid>
 
         </DockPanel>
         <!--#endregion-->
+
+        <Grid Grid.Row="1" 
+              Grid.Column="1">
+            <StackPanel Orientation="Vertical" 
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center"
+                        Height="200"
+                        Width="200"
+                        >
+                <Image Source="Assets/images/baseline_waving_hand_black_48.png"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Height="160" 
+                   Opacity="0.2"/>
+                <TextBlock Text="欢迎！在想什么呢？"
+                           FontSize="20" 
+                           Foreground="#FFACB6C2"
+                           HorizontalAlignment="Center"
+                           FontWeight="DemiBold"
+                           Margin="10"/>
+            </StackPanel>
+            
+
+        </Grid>
 
         <Frame x:Name="AppFrame" 
                Grid.Row="1" Grid.Column="1"

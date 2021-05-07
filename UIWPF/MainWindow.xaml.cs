@@ -26,7 +26,8 @@ namespace UIWPF
         public MainWindow()
         {
             InitializeComponent();
-            AccountUserName.Content = UIWPF.Resources.Pages.Login.globalUser.UserId; 
+            AccountUserName.Content = UIWPF.Resources.Pages.Login.globalUser.UserId;
+            AppFrame.JournalOwnership = JournalOwnership.OwnsJournal;
         }
 
         #region 标题栏事件
@@ -92,7 +93,20 @@ namespace UIWPF
         /// </summary>
         private void btn_close_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            
+            if (MessageBox.Show("确认要退出吗？", "登出确认", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+            {
+                if (ifSave())
+                {
+                    Application.Current.Shutdown();
+                }
+                else
+                {
+                    Window signOutCheck = new Resources.Windows.SignOutSaveCheck();
+                    signOutCheck.ShowDialog();
+                }
+
+            }
         }
 
 
@@ -110,6 +124,7 @@ namespace UIWPF
             }
         }
 
+        int flag = 0;
         private void MenuSwitcher(object sender, RoutedEventArgs e)
         {
             var button = sender as RadioButton;
@@ -118,19 +133,59 @@ namespace UIWPF
                 switch(button.Name)
                 {
                     case "DataCollection":
-                        this.AppFrame.Navigate(typeof(Resources.Pages.DataCollection));
+                        this.AppFrame.Navigate(new Resources.Pages.DataCollection());
+                        firstClickCtrl();
                         break;
                     case "DataCollation":
-                        this.AppFrame.Navigate(typeof(Resources.Pages.DataCollation));
+                        this.AppFrame.Navigate(new Resources.Pages.DataCollation());
+                        firstClickCtrl();
                         break;
                     case "QualityTracker":
-                        this.AppFrame.Navigate(typeof(Resources.Pages.QualityTracker));
+                        this.AppFrame.Navigate(new Resources.Pages.QualityTracker());
+                        firstClickCtrl();
                         break;
                     default:
                         MessageBox.Show("Failed to load the page.");
                         break;
                 }
             }
+            flag = 1;
+        }
+
+        // Avoid Exception when the first click happens
+        private void firstClickCtrl()
+        {
+            if(flag == 0)
+            {
+                return;
+            }
+            else
+            {
+                AppFrame.RemoveBackEntry();
+            }
+        }
+
+        private void sign_out_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("确认要登出账户吗？", "登出确认", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+            {
+                if(ifSave())
+                {
+                    Application.Current.Shutdown();
+                }
+                else
+                {
+                    Window signOutCheck = new Resources.Windows.SignOutSaveCheck();
+                    signOutCheck.ShowDialog();
+                }
+                
+            }
+        }
+
+        private bool ifSave()
+        {
+            //TODO
+            return false;
         }
     }
 }
