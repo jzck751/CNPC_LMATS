@@ -128,9 +128,8 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="resourses\cnpc_lmats_mc%281%29.sql" />
+    <Content Include="resourses\cnpc_lmats_mc.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

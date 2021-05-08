@@ -11,17 +11,17 @@
  Target Server Version : 80022
  File Encoding         : 65001
 
- Date: 04/05/2021 15:40:43
+ Date: 08/05/2021 12:14:23
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
--- Table structure for mc_after-effect-gas-detection
+-- Table structure for mc_after_effect_gas_detection
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_after-effect-gas-detection`;
-CREATE TABLE `mc_after-effect-gas-detection`  (
+DROP TABLE IF EXISTS `mc_after_effect_gas_detection`;
+CREATE TABLE `mc_after_effect_gas_detection`  (
   `date` datetime NOT NULL COMMENT '日期',
   `wellDepth` double NOT NULL COMMENT '井深',
   `drillLocation` double NOT NULL COMMENT '钻头位置',
@@ -42,10 +42,10 @@ CREATE TABLE `mc_after-effect-gas-detection`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_annular-tubes-record
+-- Table structure for mc_annular_tubes_record
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_annular-tubes-record`;
-CREATE TABLE `mc_annular-tubes-record`  (
+DROP TABLE IF EXISTS `mc_annular_tubes_record`;
+CREATE TABLE `mc_annular_tubes_record`  (
   `serialNumber` int NOT NULL AUTO_INCREMENT COMMENT '序号',
   `size` double NOT NULL COMMENT '尺寸',
   `totalOfLength` double NOT NULL COMMENT '累长',
@@ -59,10 +59,10 @@ CREATE TABLE `mc_annular-tubes-record`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_carbonate-rock-content-analyse
+-- Table structure for mc_carbonate_rock_content_analyse
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_carbonate-rock-content-analyse`;
-CREATE TABLE `mc_carbonate-rock-content-analyse`  (
+DROP TABLE IF EXISTS `mc_carbonate_rock_content_analyse`;
+CREATE TABLE `mc_carbonate_rock_content_analyse`  (
   `serialNumber` int NOT NULL AUTO_INCREMENT COMMENT '序号',
   `wellDepth` double NOT NULL COMMENT '井深',
   `sampleType` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '样品类型',
@@ -73,10 +73,10 @@ CREATE TABLE `mc_carbonate-rock-content-analyse`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_core-block-length-and-well-depth-corrected
+-- Table structure for mc_core_block_length_and_well_depth_corrected
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_core-block-length-and-well-depth-corrected`;
-CREATE TABLE `mc_core-block-length-and-well-depth-corrected`  (
+DROP TABLE IF EXISTS `mc_core_block_length_and_well_depth_corrected`;
+CREATE TABLE `mc_core_block_length_and_well_depth_corrected`  (
   `theNumberOfCoring` int NOT NULL AUTO_INCREMENT COMMENT '取芯次数',
   `totalBlockNumber` int NOT NULL COMMENT '总块号',
   `blockNumber` int NOT NULL COMMENT '块号',
@@ -94,10 +94,10 @@ CREATE TABLE `mc_core-block-length-and-well-depth-corrected`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_drill-wall-and-take-core-record
+-- Table structure for mc_drill_wall_and_take_core_record
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_drill-wall-and-take-core-record`;
-CREATE TABLE `mc_drill-wall-and-take-core-record`  (
+DROP TABLE IF EXISTS `mc_drill_wall_and_take_core_record`;
+CREATE TABLE `mc_drill_wall_and_take_core_record`  (
   `canisterNumber` int NOT NULL COMMENT '筒次',
   `wellTopDepth` double NOT NULL COMMENT '井段顶深',
   `wellBottomDepth` double NOT NULL COMMENT '井段底深',
@@ -128,10 +128,10 @@ CREATE TABLE `mc_drill-wall-and-take-core-record`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_five-peak
+-- Table structure for mc_five_peak
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_five-peak`;
-CREATE TABLE `mc_five-peak`  (
+DROP TABLE IF EXISTS `mc_five_peak`;
+CREATE TABLE `mc_five_peak`  (
   `parameterS11` double NOT NULL COMMENT '参数S11',
   `parameterS21` double NOT NULL COMMENT '参数S21',
   `parameterS22` double NOT NULL COMMENT '参数S22',
@@ -140,10 +140,10 @@ CREATE TABLE `mc_five-peak`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_light-dydrocarbon-log-well-analyse
+-- Table structure for mc_light_dydrocarbon_log_well_analyse
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_light-dydrocarbon-log-well-analyse`;
-CREATE TABLE `mc_light-dydrocarbon-log-well-analyse`  (
+DROP TABLE IF EXISTS `mc_light_dydrocarbon_log_well_analyse`;
+CREATE TABLE `mc_light_dydrocarbon_log_well_analyse`  (
   `wellDepth` double NOT NULL COMMENT '井深',
   `position` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '层位',
   `theLithologyNamed` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '岩性定名',
@@ -152,10 +152,10 @@ CREATE TABLE `mc_light-dydrocarbon-log-well-analyse`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_lithology-and-oil-gas-water-fluorescence
+-- Table structure for mc_lithology_and_oil_gas_water_fluorescence
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_lithology-and-oil-gas-water-fluorescence`;
-CREATE TABLE `mc_lithology-and-oil-gas-water-fluorescence`  (
+DROP TABLE IF EXISTS `mc_lithology_and_oil_gas_water_fluorescence`;
+CREATE TABLE `mc_lithology_and_oil_gas_water_fluorescence`  (
   `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '颜色',
   `oilLevel` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '含油级别',
   `lithology` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '岩性',
@@ -167,10 +167,10 @@ CREATE TABLE `mc_lithology-and-oil-gas-water-fluorescence`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_log-well-blackboard-newspaper
+-- Table structure for mc_log_well_blackboard_newspaper
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_log-well-blackboard-newspaper`;
-CREATE TABLE `mc_log-well-blackboard-newspaper`  (
+DROP TABLE IF EXISTS `mc_log_well_blackboard_newspaper`;
+CREATE TABLE `mc_log_well_blackboard_newspaper`  (
   `date` datetime NOT NULL COMMENT '日期',
   `classes` int NOT NULL COMMENT '班次',
   `watch` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '值班人',
@@ -297,10 +297,10 @@ CREATE TABLE `mc_log-well-blackboard-newspaper`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_mri-log-well-analyse
+-- Table structure for mc_mri_log_well_analyse
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_mri-log-well-analyse`;
-CREATE TABLE `mc_mri-log-well-analyse`  (
+DROP TABLE IF EXISTS `mc_mri_log_well_analyse`;
+CREATE TABLE `mc_mri_log_well_analyse`  (
   `serialNumber` int NOT NULL AUTO_INCREMENT COMMENT '序号',
   `wellDepth` double NOT NULL COMMENT '井深',
   `position` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '层位',
@@ -315,10 +315,10 @@ CREATE TABLE `mc_mri-log-well-analyse`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_nature-gamma-power-spectrum-log-well-analyse
+-- Table structure for mc_nature_gamma_power_spectrum_log_well_analyse
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_nature-gamma-power-spectrum-log-well-analyse`;
-CREATE TABLE `mc_nature-gamma-power-spectrum-log-well-analyse`  (
+DROP TABLE IF EXISTS `mc_nature_gamma_power_spectrum_log_well_analyse`;
+CREATE TABLE `mc_nature_gamma_power_spectrum_log_well_analyse`  (
   `serialNumber` int NOT NULL AUTO_INCREMENT COMMENT '序号',
   `position` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '层位',
   `wellDepth` double NOT NULL COMMENT '井深',
@@ -333,10 +333,10 @@ CREATE TABLE `mc_nature-gamma-power-spectrum-log-well-analyse`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_project-exception-report
+-- Table structure for mc_project_exception_report
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_project-exception-report`;
-CREATE TABLE `mc_project-exception-report`  (
+DROP TABLE IF EXISTS `mc_project_exception_report`;
+CREATE TABLE `mc_project_exception_report`  (
   `well_no` int NOT NULL COMMENT '井号',
   `dateTime` datetime NOT NULL COMMENT '日期',
   `wellLogTeam` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '录井队',
@@ -360,10 +360,10 @@ CREATE TABLE `mc_project-exception-report`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_ration-fluorescence-analyse
+-- Table structure for mc_ration_fluorescence_analyse
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_ration-fluorescence-analyse`;
-CREATE TABLE `mc_ration-fluorescence-analyse`  (
+DROP TABLE IF EXISTS `mc_ration_fluorescence_analyse`;
+CREATE TABLE `mc_ration_fluorescence_analyse`  (
   `serialNumber` int NOT NULL AUTO_INCREMENT COMMENT '序号',
   `wellNo` int NOT NULL COMMENT '井号',
   `wellDepth` double NOT NULL COMMENT '井深',
@@ -379,10 +379,10 @@ CREATE TABLE `mc_ration-fluorescence-analyse`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_rock-cutting-grass-record
+-- Table structure for mc_rock_cutting_grass_record
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_rock-cutting-grass-record`;
-CREATE TABLE `mc_rock-cutting-grass-record`  (
+DROP TABLE IF EXISTS `mc_rock_cutting_grass_record`;
+CREATE TABLE `mc_rock_cutting_grass_record`  (
   `wellDepth` double NOT NULL COMMENT '井深',
   `drillingTime` datetime NOT NULL COMMENT '钻时',
   `designatedCuttingsOfCuttings` double NOT NULL COMMENT '定名岩屑占岩屑',
@@ -390,10 +390,10 @@ CREATE TABLE `mc_rock-cutting-grass-record`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_rock-describe-record
+-- Table structure for mc_rock_describe_record
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_rock-describe-record`;
-CREATE TABLE `mc_rock-describe-record`  (
+DROP TABLE IF EXISTS `mc_rock_describe_record`;
+CREATE TABLE `mc_rock_describe_record`  (
   `serialNumber` int NOT NULL AUTO_INCREMENT COMMENT '序号',
   `position` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '层位',
   `topDepth` double NOT NULL COMMENT '顶深',
@@ -412,10 +412,10 @@ CREATE TABLE `mc_rock-describe-record`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_rock-hot-evaporation-hydrocarbon-gas-chromatography
+-- Table structure for mc_rock_hot_evaporation_hydrocarbon_gas_chromatography
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_rock-hot-evaporation-hydrocarbon-gas-chromatography`;
-CREATE TABLE `mc_rock-hot-evaporation-hydrocarbon-gas-chromatography`  (
+DROP TABLE IF EXISTS `mc_rock_hot_evaporation_hydrocarbon_gas_chromatography`;
+CREATE TABLE `mc_rock_hot_evaporation_hydrocarbon_gas_chromatography`  (
   `wellDepth` double NOT NULL COMMENT '井深',
   `position` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '层位',
   `theLithologyNamed` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '岩性定名',
@@ -428,10 +428,10 @@ CREATE TABLE `mc_rock-hot-evaporation-hydrocarbon-gas-chromatography`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_sample-into-the-storage-note
+-- Table structure for mc_sample_into_the_storage_note
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_sample-into-the-storage-note`;
-CREATE TABLE `mc_sample-into-the-storage-note`  (
+DROP TABLE IF EXISTS `mc_sample_into_the_storage_note`;
+CREATE TABLE `mc_sample_into_the_storage_note`  (
   `region` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '地区',
   `wellNo` int NOT NULL COMMENT '井别',
   `spudDate` datetime NOT NULL COMMENT '开钻日期',
@@ -460,10 +460,10 @@ CREATE TABLE `mc_sample-into-the-storage-note`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_seam-statistics
+-- Table structure for mc_seam_statistics
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_seam-statistics`;
-CREATE TABLE `mc_seam-statistics`  (
+DROP TABLE IF EXISTS `mc_seam_statistics`;
+CREATE TABLE `mc_seam_statistics`  (
   `takeCoreCanisterNumber` int NOT NULL COMMENT '取芯筒次',
   `wellDepthToDepth` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '井段',
   `coreNumber` int NOT NULL AUTO_INCREMENT COMMENT '岩心编号',
@@ -496,10 +496,10 @@ CREATE TABLE `mc_seam-statistics`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_shale-destiny-analyse
+-- Table structure for mc_shale_destiny_analyse
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_shale-destiny-analyse`;
-CREATE TABLE `mc_shale-destiny-analyse`  (
+DROP TABLE IF EXISTS `mc_shale_destiny_analyse`;
+CREATE TABLE `mc_shale_destiny_analyse`  (
   `serialNumber` int NOT NULL AUTO_INCREMENT COMMENT '序号',
   `position` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '层位',
   `wellDepth` double NOT NULL COMMENT '井深',
@@ -511,10 +511,10 @@ CREATE TABLE `mc_shale-destiny-analyse`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_three-peak
+-- Table structure for mc_three_peak
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_three-peak`;
-CREATE TABLE `mc_three-peak`  (
+DROP TABLE IF EXISTS `mc_three_peak`;
+CREATE TABLE `mc_three_peak`  (
   `parameterS1` double NOT NULL COMMENT '参数S1',
   `parameterS2` double NOT NULL COMMENT '参数S2',
   `parameterS3` double NOT NULL COMMENT '参数S3',
@@ -522,10 +522,10 @@ CREATE TABLE `mc_three-peak`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_three-peak-and-five-peak-base-class
+-- Table structure for mc_three_peak_and_five_peak_base_class
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_three-peak-and-five-peak-base-class`;
-CREATE TABLE `mc_three-peak-and-five-peak-base-class`  (
+DROP TABLE IF EXISTS `mc_three_peak_and_five_peak_base_class`;
+CREATE TABLE `mc_three_peak_and_five_peak_base_class`  (
   `serialNumber` int NOT NULL COMMENT '序号',
   `wellDepth` double NOT NULL COMMENT '井深',
   `theLithologyNamed` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '岩性定名',
@@ -535,10 +535,10 @@ CREATE TABLE `mc_three-peak-and-five-peak-base-class`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_threepeak-fivepeak-base-class
+-- Table structure for mc_threepeak_fivepeak_base_class
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_threepeak-fivepeak-base-class`;
-CREATE TABLE `mc_threepeak-fivepeak-base-class`  (
+DROP TABLE IF EXISTS `mc_threepeak_fivepeak_base_class`;
+CREATE TABLE `mc_threepeak_fivepeak_base_class`  (
   `serialNumber` int NOT NULL COMMENT '序号',
   `wellDepth` double NOT NULL COMMENT '井深',
   `theLithologyNamed` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '岩心定名',
@@ -547,10 +547,10 @@ CREATE TABLE `mc_threepeak-fivepeak-base-class`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_well-wall-take-core
+-- Table structure for mc_well_wall_take_core
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_well-wall-take-core`;
-CREATE TABLE `mc_well-wall-take-core`  (
+DROP TABLE IF EXISTS `mc_well_wall_take_core`;
+CREATE TABLE `mc_well_wall_take_core`  (
   `serialNumber` int NOT NULL AUTO_INCREMENT COMMENT '序号',
   `position` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '层位',
   `wellDepth` double NOT NULL COMMENT '井深',
@@ -565,10 +565,10 @@ CREATE TABLE `mc_well-wall-take-core`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_x-ray-diffraction-mineral-log-well-analyse
+-- Table structure for mc_x_ray_diffraction_mineral_log_well_analyse
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_x-ray-diffraction-mineral-log-well-analyse`;
-CREATE TABLE `mc_x-ray-diffraction-mineral-log-well-analyse`  (
+DROP TABLE IF EXISTS `mc_x_ray_diffraction_mineral_log_well_analyse`;
+CREATE TABLE `mc_x_ray_diffraction_mineral_log_well_analyse`  (
   `serialNumber` int NOT NULL AUTO_INCREMENT COMMENT '序号',
   `wellDepth` double NOT NULL COMMENT '井深',
   `theLithology` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '岩性定名',
@@ -584,19 +584,19 @@ CREATE TABLE `mc_x-ray-diffraction-mineral-log-well-analyse`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_x-ray-fluorescence-element-log-well-analyse
+-- Table structure for mc_x_ray_fluorescence_element_log_well_analyse
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_x-ray-fluorescence-element-log-well-analyse`;
-CREATE TABLE `mc_x-ray-fluorescence-element-log-well-analyse`  (
+DROP TABLE IF EXISTS `mc_x_ray_fluorescence_element_log_well_analyse`;
+CREATE TABLE `mc_x_ray_fluorescence_element_log_well_analyse`  (
   `wellDepth` double NOT NULL COMMENT '井深',
   `element_1_Content` double NOT NULL COMMENT '元素含量'
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_xxwell-annular-tubes-measure-record
+-- Table structure for mc_xxwell_annular_tubes_measure_record
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_xxwell-annular-tubes-measure-record`;
-CREATE TABLE `mc_xxwell-annular-tubes-measure-record`  (
+DROP TABLE IF EXISTS `mc_xxwell_annular_tubes_measure_record`;
+CREATE TABLE `mc_xxwell_annular_tubes_measure_record`  (
   `annularTubes_date` datetime NOT NULL COMMENT '日期',
   `annularTubes_serialNumber` int NOT NULL COMMENT '套管序号',
   `annularTubes_placeOfOrigin` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '套管产地',
@@ -610,10 +610,10 @@ CREATE TABLE `mc_xxwell-annular-tubes-measure-record`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_xxwell-chlorine-titration-record
+-- Table structure for mc_xxwell_chlorine_titration_record
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_xxwell-chlorine-titration-record`;
-CREATE TABLE `mc_xxwell-chlorine-titration-record`  (
+DROP TABLE IF EXISTS `mc_xxwell_chlorine_titration_record`;
+CREATE TABLE `mc_xxwell_chlorine_titration_record`  (
   `serialNumber` int NOT NULL COMMENT '编号',
   `samplingDepth` double NOT NULL COMMENT '取样井深',
   `silverNitrateConcentrationEquivalent` double NOT NULL COMMENT '硝酸银浓度当量',
@@ -628,10 +628,10 @@ CREATE TABLE `mc_xxwell-chlorine-titration-record`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_xxwell-dirll-tools-measure-record
+-- Table structure for mc_xxwell_dirll_tools_measure_record
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_xxwell-dirll-tools-measure-record`;
-CREATE TABLE `mc_xxwell-dirll-tools-measure-record`  (
+DROP TABLE IF EXISTS `mc_xxwell_dirll_tools_measure_record`;
+CREATE TABLE `mc_xxwell_dirll_tools_measure_record`  (
   `date` datetime NOT NULL COMMENT '日期',
   `serialNumber` int NOT NULL COMMENT '序号',
   `soloLength` double NOT NULL COMMENT '单根长度',
@@ -641,10 +641,10 @@ CREATE TABLE `mc_xxwell-dirll-tools-measure-record`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for mc_xxwell-late-time-measure-record
+-- Table structure for mc_xxwell_late_time_measure_record
 -- ----------------------------
-DROP TABLE IF EXISTS `mc_xxwell-late-time-measure-record`;
-CREATE TABLE `mc_xxwell-late-time-measure-record`  (
+DROP TABLE IF EXISTS `mc_xxwell_late_time_measure_record`;
+CREATE TABLE `mc_xxwell_late_time_measure_record`  (
   `date` datetime NOT NULL COMMENT '时间',
   `drillLocation` double NOT NULL COMMENT '钻头位置',
   `theoreticalLateTime` datetime NOT NULL COMMENT '理论迟到时间',
