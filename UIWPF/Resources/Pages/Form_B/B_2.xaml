@@ -5,33 +5,36 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:UIWPF.Resources.Pages.Form_B" xmlns:controls="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="900" d:DesignWidth="1600"
       Title="B_2" Background="#FFD7E4F2">
     
 
 
     <!-- Shallow Copy -->
     <Grid>
-        <controls:DataGrid Background="#FFD7E4F2">
+        <DataGrid x:Name="dataGrid" 
+                  Background="#FFD7E4F2"
+                  Foreground="Black"
+                  BorderBrush="#ccc"
+                  AutoGenerateColumns="True">
             
             <DataGrid.Columns>
-                <DataGridTextColumn Width="70" Header="序号" />
-                <DataGridTextColumn Width="70" Header="层位" />
-                
-                <DataGridTemplateColumn HeaderStyle="{StaticResource B_2_1}">
-                    
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                           
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-
-                <DataGridTextColumn HeaderStyle="{StaticResource B_2_2}">
-                    
-                </DataGridTextColumn>
-                
+                <DataGridTextColumn Width="70" Header="序号" Binding="{Binding serialNumber}"/>
+                <DataGridTextColumn Width="70" Header="层位" Binding="{Binding serialNumber}"/>
+                <DataGridTextColumn Width="100" Header="井段顶深" Binding="{Binding serialNumber}"/>
+                <DataGridTextColumn Width="100" Header="井段底深" Binding="{Binding serialNumber}"/>
+                <DataGridTextColumn Width="100" Header="岩颜色" Binding="{Binding serialNumber}"/>
+                <DataGridTextColumn Width="100" Header="含油级别" Binding="{Binding serialNumber}"/>
+                <DataGridTextColumn Width="100" Header="岩性" Binding="{Binding serialNumber}"/>
+                <DataGridTextColumn Width="200" Header="岩性及含油气水描述" Binding="{Binding serialNumber}"/>
+                <DataGridTextColumn Width="100" Header="定名岩屑占岩屑" Binding="{Binding serialNumber}" />
+                <DataGridTextColumn Width="100" Header="含油岩屑占定名岩屑" Binding="{Binding serialNumber}"/>
+                <DataGridTextColumn Width="100" Header="荧光湿照颜色" Binding="{Binding serialNumber}"/>
+                <DataGridTextColumn Width="100" Header="荧光滴照颜色" Binding="{Binding serialNumber}"/>
+                <DataGridTextColumn Width="100" Header="荧光干照颜色" Binding="{Binding serialNumber}"/>
+                <DataGridTextColumn Width="100" Header="荧光对比级别" Binding="{Binding serialNumber}"/>
             </DataGrid.Columns>
-        </controls:DataGrid>
+            
+        </DataGrid>
     </Grid>
 </Page>

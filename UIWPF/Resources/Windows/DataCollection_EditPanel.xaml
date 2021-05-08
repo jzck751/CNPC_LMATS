@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:UIWPF.Resources.Windows"
         mc:Ignorable="d"
         WindowStyle="ThreeDBorderWindow"
-        Title="数据采集编辑面板" Height="450" Width="800"
+        Title="数据采集编辑面板" Height="900" Width="1600"
         Background="#FFD7E4F2">
     <Grid>
         <Grid.RowDefinitions>
@@ -80,7 +80,13 @@
         <TabControl x:Name="dataCollTab" Grid.Row="2" Grid.Column="1" Background="#FFD7E4F2">
             <TabItem Header="Test">
                 <Grid>
-                    <Frame x:Name="testFrame" />
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                        
+                         <Frame x:Name="testFrame" NavigationUIVisibility="Hidden" Margin="5"/>
+                       
+                    </ScrollViewer>
+                    
+
                 </Grid>
             </TabItem>
         </TabControl>
