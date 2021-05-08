@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,8 +25,28 @@ namespace UIWPF.Resources.Pages.Form_B
         public B_2()
         {
             InitializeComponent();
+            loadData();
         }
 
-        
+        private void loadData()
+        {
+            MySqlConnectionStringBuilder connectionString = new MySqlConnectionStringBuilder();
+            connectionString.Server = "localhost";
+            connectionString.UserID = "root";
+            connectionString.Password = "123456";
+            connectionString.Database = "cnpc_lmats";
+            connectionString.AllowUserVariables = true;
+            //Using DbHelper
+            //DbHelper.DbUtility dbUtility = new DbHelper.DbUtility(connectionString.ToString(), DbHelper.DbProviderType.MySql);
+            //DataTable dt = dbUtility.ExecuteDataTable("",)
+            MySqlConnection connection = new MySqlConnection(connectionString.ToString());
+            MySqlCommand cmd = new MySqlCommand("select * from mc_rock_describe_record", connection);
+            connection.Open();
+            DataTable dt = new DataTable();
+            
+            dt.Load(cmd.ExecuteReader());
+            connection.Close();
+            dataGrid.ItemsSource = dt.DefaultView;
+        }
     }
 }
