@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 
-namespace DbHelper
+namespace DAL.DBUtils
 {
     /// <summary>
     /// 通用数据库访问类，封装了对数据库的常见操作
     ///</summary>
-    public sealed class DbUtility
+    public class DbUtility
     {
         public string ConnectionString { get; set; }
         private DbProviderFactory providerFactory;

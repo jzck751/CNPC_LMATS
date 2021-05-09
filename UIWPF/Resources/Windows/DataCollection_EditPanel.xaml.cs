@@ -20,7 +20,7 @@ namespace UIWPF.Resources.Windows
         public DataCollection_EditPanel()
         {
             InitializeComponent();
-            this.testFrame.Navigate(new Resources.Pages.Form_B.B_2());
+            this.testFrame.Navigate(new Resources.Pages.Form_B.B_test());
         }
     }
 }

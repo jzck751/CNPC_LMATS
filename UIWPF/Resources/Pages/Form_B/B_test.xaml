@@ -9,6 +9,15 @@
       Title="B_test" Background="#FFD7E4F2">
 
     <Grid>
-        
+        <DataGrid x:Name="dataGrid_test"
+                  Background="#FFD7E4F2"
+                  Foreground="Black"
+                  BorderBrush="#ccc"
+                  AutoGenerateColumns="True" SelectionChanged="dataGrid_test_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="70" Header="表名" Binding="{Binding serialNumber}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <ComboBox Name="combMainBrand"  Background="#FFD" HorizontalAlignment="Left" Margin="181,10,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged"/>
     </Grid>
 </Page>

@@ -44,5 +44,16 @@ namespace UIWPF.Resources.Pages
             Window editPanelWindow = new Resources.Windows.DataCollection_EditPanel();
             editPanelWindow.Show();
         }
+
+        private void alledit_Click(object sender, RoutedEventArgs e)
+        {
+            Window editPanelWindow = new Resources.Windows.DataCollection_EditPanel();
+            editPanelWindow.Show();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using DAL.DBUtils;
 namespace UIWPF.Resources.Pages.Form_B
 {
     /// <summary>
@@ -30,23 +30,31 @@ namespace UIWPF.Resources.Pages.Form_B
 
         private void loadData()
         {
-            MySqlConnectionStringBuilder connectionString = new MySqlConnectionStringBuilder();
-            connectionString.Server = "localhost";
-            connectionString.UserID = "root";
-            connectionString.Password = "123456";
-            connectionString.Database = "cnpc_lmats";
-            connectionString.AllowUserVariables = true;
+            //MySqlConnectionStringBuilder connectionString = new MySqlConnectionStringBuilder();
+            //connectionString.Server = "localhost";
+            //connectionString.UserID = "root";
+            //connectionString.Password = "123456";
+            //connectionString.Database = "cnpc_lmats";
+            //connectionString.AllowUserVariables = true;
             //Using DbHelper
             //DbHelper.DbUtility dbUtility = new DbHelper.DbUtility(connectionString.ToString(), DbHelper.DbProviderType.MySql);
             //DataTable dt = dbUtility.ExecuteDataTable("",)
-            MySqlConnection connection = new MySqlConnection(connectionString.ToString());
-            MySqlCommand cmd = new MySqlCommand("select * from mc_rock_describe_record", connection);
-            connection.Open();
-            DataTable dt = new DataTable();
-            
-            dt.Load(cmd.ExecuteReader());
-            connection.Close();
+
+            //MySqlConnection connection = new MySqlConnection(connectionString.ToString());
+            //MySqlCommand cmd = new MySqlCommand("select * from mc_rock_describe_record", connection);
+            //connection.Open();
+            //DataTable dt = new DataTable();
+
+            string sql = "select * from mc_rock_describe_record";
+            DataTable dt = DbManager.Ins.ExcuteDataTable(sql);
+
+
+            //dt.Load(cmd.ExecuteReader());
+            //connection.Close();
+
             dataGrid.ItemsSource = dt.DefaultView;
+
+            
         }
     }
 }

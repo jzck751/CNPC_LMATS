@@ -102,7 +102,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBUtils\SQLHelper.cs" />
+    <Compile Include="DBUtils\DbHelper.cs" />
+    <Compile Include="DBUtils\DbManager.cs" />
+    <Compile Include="DBUtils\modify_B_2.cs" />
     <Compile Include="DBUtils\UserDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

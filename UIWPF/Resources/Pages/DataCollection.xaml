@@ -22,7 +22,7 @@
         <DockPanel Grid.ColumnSpan="2"
                    Background="#FF464775">
             <Menu x:Name="menuBar" Background="#FF464775">
-                <MenuItem Header="文件" Height="20" Foreground="White" FontSize="14">
+                <MenuItem Header="文件" Height="20" Foreground="White" FontSize="14" Click="MenuItem_Click">
                     <MenuItem Header="新建" Height="20"/>
                     <MenuItem Header="打开" Height="20"/>
                     <Separator/>
@@ -35,6 +35,7 @@
                     </MenuItem>
                     <Separator/>
                     <MenuItem Header="打开编辑面板" Height="20" Click="editPanel_Click"/>
+                    <MenuItem Header="普适测试" Height="20" Click="alledit_Click"/>
                 </MenuItem>
                 <MenuItem Header="编辑" Height="20" Foreground="White" FontSize="14">
                     
