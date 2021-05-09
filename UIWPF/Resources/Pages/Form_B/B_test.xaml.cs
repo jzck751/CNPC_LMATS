@@ -15,10 +15,12 @@ using DAL.DBUtils;
 namespace UIWPF.Resources.Pages.Form_B
 {
     /// <summary>
-    /// B_test.xaml 的交互逻辑
+    /// B_test.xaml 的交互逻辑 tr
     /// </summary>
     public partial class B_test : Page
     {
+        private object comboType;
+        private object cbLang;
 
         public B_test()
         {
@@ -80,5 +82,6 @@ namespace UIWPF.Resources.Pages.Form_B
             this.combMainBrand.DisplayMemberPath = "Title";
 
         }
+
     }
 }
