@@ -112,6 +112,12 @@
     <Compile Include="LoginForm\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="basic_materials\" />
+    <Folder Include="evaluate_log\" />
+    <Folder Include="geology_log\" />
+    <Folder Include="log_board\" />
+    <Folder Include="materials_trim\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
