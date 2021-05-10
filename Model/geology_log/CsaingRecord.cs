@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.geology_log
 {
-    class CsaingRecord
+    public class CsaingRecord
     {
         public string date { get; set; }//日期
         public int num { get; set; }//序号

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.log_board
 {
-    class BasicMaterials
+    public class BasicMaterials
     {
         public string date { get; set; }//日期
         public int classes { get; set; }//班次

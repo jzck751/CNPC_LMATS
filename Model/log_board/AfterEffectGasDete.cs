@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.log_board
 {
-    class AfterEffectGasDete
+    public class AfterEffectGasDete
     {
         public string time { get; set; }//时间
         public double bit_position { get; set; }//钻头位置

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.log_board
+namespace Model.geology_log
 {
-    public class DrillingToolStructure
+    class StatisDrillCo
     {
-        public string drill_tool_s { get; set; }//钻具结构
+
     }
 }

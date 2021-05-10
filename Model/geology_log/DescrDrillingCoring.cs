@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.geology_log
 {
-    class DescrDrillingCoring
+    public class DescrDrillingCoring
     {
         public int core_num { get; set; }//岩心编号
         public string wear_cond { get; set; }//磨损情况

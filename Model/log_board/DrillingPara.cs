@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.log_board
 {
-    class Drilling_para
+    public class DrillingPara
     {
         //钻井参数
         public double wob { get; set; }//钻压

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.log_board
 {
-    class EngineeringAbno
+    public class EngineeringAbno
     {
         //工程异常报告
         public string time { get; set; }//时间

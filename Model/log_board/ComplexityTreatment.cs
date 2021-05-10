@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.log_board
 {
-    class ComplexityTreatment
+    public class ComplexityTreatment
     {
         //钻井复杂或事故处理过程
         public double well_depth { get; set; }//井深

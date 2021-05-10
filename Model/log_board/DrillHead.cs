@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.log_board
 {
-    class DrillHead
+    public class DrillHead
     {
         //钻头
         public int number { get; set; }//序号

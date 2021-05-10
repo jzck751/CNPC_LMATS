@@ -48,6 +48,17 @@
   <ItemGroup>
     <Compile Include="Base_Class\Form_B_threePeak_and_fivePeak.cs" />
     <Compile Include="Base_Class\lithology_and_oil-gas-water_fluorescence.cs" />
+    <Compile Include="ComprehensiveLog\AfterGasDeRecord.cs" />
+    <Compile Include="evaluate_log\CarbonateConAna.cs" />
+    <Compile Include="evaluate_log\DensityAnaMudston.cs" />
+    <Compile Include="evaluate_log\GasChroaHydcaRocks.cs" />
+    <Compile Include="evaluate_log\LightHydrLogging.cs" />
+    <Compile Include="evaluate_log\NatureGammaSpeLog.cs" />
+    <Compile Include="evaluate_log\NucMagReason.cs" />
+    <Compile Include="evaluate_log\QuantiFluLogging.cs" />
+    <Compile Include="evaluate_log\ThermDetionRock.cs" />
+    <Compile Include="evaluate_log\XRayDiffLogging.cs" />
+    <Compile Include="evaluate_log\XRayFiuoreLogging.cs" />
     <Compile Include="Form_A\Form_A_1.cs" />
     <Compile Include="Form_A\Form_A_2.cs" />
     <Compile Include="geology_log\ChlorideTiDrilling.cs" />
@@ -56,6 +67,7 @@
     <Compile Include="geology_log\DescrDrillingCoring.cs" />
     <Compile Include="geology_log\FracCavitySta.cs" />
     <Compile Include="geology_log\SpecialCondMarking.cs" />
+    <Compile Include="geology_log\StatisDrillCo.cs" />
     <Compile Include="log_board\AfterEffectGasDete.cs" />
     <Compile Include="log_board\BasicMaterials.cs" />
     <Compile Include="log_board\CashingRunning.cs" />
@@ -66,7 +78,7 @@
     <Compile Include="log_board\DrillingCoring.cs" />
     <Compile Include="log_board\DrillingFluif.cs" />
     <Compile Include="log_board\DrillingToolStructure.cs" />
-    <Compile Include="log_board\Drilling_para.cs" />
+    <Compile Include="log_board\DrillingPara.cs" />
     <Compile Include="log_board\EngineeringAbno.cs" />
     <Compile Include="log_board\EvualationLogging.cs" />
     <Compile Include="log_board\InstrumentOpCail.cs" />
@@ -76,6 +88,12 @@
     <Compile Include="log_board\Situation.cs" />
     <Compile Include="log_board\TestWell.cs" />
     <Compile Include="log_board\Track.cs" />
+    <Compile Include="materials_trim\BasicDataSheet.cs" />
+    <Compile Include="materials_trim\LoggingWorkSta.cs" />
+    <Compile Include="materials_trim\OilGasDisSta.cs" />
+    <Compile Include="materials_trim\StaTableAnaSamp.cs" />
+    <Compile Include="materials_trim\StaticDrillCo.cs" />
+    <Compile Include="materials_trim\SubStaTableDrill.cs" />
     <Compile Include="unused form_A\Form_A_2_1.cs" />
     <Compile Include="unused form_A\Form_A_2_2.cs" />
     <Compile Include="Form_A\Form_A_3.cs" />
@@ -140,8 +158,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="basic_materials\" />
-    <Folder Include="evaluate_log\" />
-    <Folder Include="materials_trim\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

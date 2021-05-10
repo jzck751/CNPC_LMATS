@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.log_board
 {
-    class DrillingFluif
+    public class DrillingFluif
     {
         //钻井液性能
         public string type { get; set; }//类型

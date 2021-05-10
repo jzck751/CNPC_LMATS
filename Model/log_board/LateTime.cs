@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.log_board
 {
-    class LateTime
+    public class LateTime
     {
         //迟到时间
         public double measur_w_dep { get; set; }//测量井深

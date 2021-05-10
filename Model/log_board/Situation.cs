@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.log_board
 {
-    class Situation
+    public class Situation
     {
         //钻井工况
         public string time { get; set; }//时间

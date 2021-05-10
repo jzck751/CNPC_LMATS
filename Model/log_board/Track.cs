@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.log_board
 {
-    class Track
+    public class Track
     {
         //测斜
         public double depth_measur { get; set; }//测斜井深

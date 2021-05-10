@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.log_board
 {
-    class DrillingCoring
+    public class DrillingCoring
     {
         //钻井取芯
         public int tube_times { get; set; }//筒次

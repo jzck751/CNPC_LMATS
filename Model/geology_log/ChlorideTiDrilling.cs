@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.geology_log
 {
-    class ChlorideTiDrilling
+    public class ChlorideTiDrilling
     {
         public string num { get; set; }//编号
         public double samp_well_dep { get; set; }//取样井深

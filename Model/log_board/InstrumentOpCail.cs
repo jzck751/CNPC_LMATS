@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.log_board
 {
-    class InstrumentOpCail
+    public class InstrumentOpCail
     {
         public string instru_op_ca { get; set; }//仪器运行及校验
     }

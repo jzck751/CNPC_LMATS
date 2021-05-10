@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.geology_log
 {
-    class FracCavitySta
+    public class FracCavitySta
     {
         public int time_cor { get; set; }//取心筒次
         public double well_sec { get; set; }//井段

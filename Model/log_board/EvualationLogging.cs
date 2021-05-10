@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.log_board
 {
-    class EvualationLogging
+    public class EvualationLogging
     {
         //评价录井
         public string mud_log_p { get; set; }//录井项目

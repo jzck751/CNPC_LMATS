@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.log_board
 {
-    class MidwayTest
+    public class MidwayTest
     {
         //试油（测试）
         public double well_section { get; set; }//丼段

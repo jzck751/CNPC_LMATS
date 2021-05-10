@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.log_board
 {
-    class Cementing
+    public class Cementing
     {
         //固井
         public string cement_brand { get; set; }//水泥品牌

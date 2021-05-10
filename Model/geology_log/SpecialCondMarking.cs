@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.geology_log
 {
-    class SpecialCondMarking
+    public class SpecialCondMarking
     {
         public int well_num { get; set; }//丼号
         public string date { get; set; }//日期

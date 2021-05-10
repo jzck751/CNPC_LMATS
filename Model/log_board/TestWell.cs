@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.log_board
 {
-    class TestWell
+    public class TestWell
     {
         //测井
         public string text_dill_pro { get; set; }//测井项目

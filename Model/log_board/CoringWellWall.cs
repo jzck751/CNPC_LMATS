@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.log_board
 {
-    class CoringWellWall
+    public class CoringWellWall
     {
         //井壁取芯
         public string coring_time { get; set; }//取心时间

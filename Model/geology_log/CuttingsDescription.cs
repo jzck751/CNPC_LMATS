@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.geology_log
 {
-    class CuttingsDescription
+    public class CuttingsDescription
     {
         public int num { get; set; }//序号
         public string horizon { get; set; }//层位
