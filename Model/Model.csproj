@@ -50,6 +50,12 @@
     <Compile Include="Base_Class\lithology_and_oil-gas-water_fluorescence.cs" />
     <Compile Include="Form_A\Form_A_1.cs" />
     <Compile Include="Form_A\Form_A_2.cs" />
+    <Compile Include="geology_log\ChlorideTiDrilling.cs" />
+    <Compile Include="geology_log\CsaingRecord.cs" />
+    <Compile Include="geology_log\CuttingsDescription.cs" />
+    <Compile Include="geology_log\DescrDrillingCoring.cs" />
+    <Compile Include="geology_log\FracCavitySta.cs" />
+    <Compile Include="geology_log\SpecialCondMarking.cs" />
     <Compile Include="log_board\AfterEffectGasDete.cs" />
     <Compile Include="log_board\BasicMaterials.cs" />
     <Compile Include="log_board\CashingRunning.cs" />
@@ -135,7 +141,6 @@
   <ItemGroup>
     <Folder Include="basic_materials\" />
     <Folder Include="evaluate_log\" />
-    <Folder Include="geology_log\" />
     <Folder Include="materials_trim\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
