@@ -50,6 +50,26 @@
     <Compile Include="Base_Class\lithology_and_oil-gas-water_fluorescence.cs" />
     <Compile Include="Form_A\Form_A_1.cs" />
     <Compile Include="Form_A\Form_A_2.cs" />
+    <Compile Include="log_board\AfterEffectGasDete.cs" />
+    <Compile Include="log_board\BasicMaterials.cs" />
+    <Compile Include="log_board\CashingRunning.cs" />
+    <Compile Include="log_board\Cementing.cs" />
+    <Compile Include="log_board\ComplexityTreatment.cs" />
+    <Compile Include="log_board\CoringWellWall.cs" />
+    <Compile Include="log_board\DrillHead.cs" />
+    <Compile Include="log_board\DrillingCoring.cs" />
+    <Compile Include="log_board\DrillingFluif.cs" />
+    <Compile Include="log_board\DrillingToolStructure.cs" />
+    <Compile Include="log_board\Drilling_para.cs" />
+    <Compile Include="log_board\EngineeringAbno.cs" />
+    <Compile Include="log_board\EvualationLogging.cs" />
+    <Compile Include="log_board\InstrumentOpCail.cs" />
+    <Compile Include="log_board\LateTime.cs" />
+    <Compile Include="log_board\LithOilGasWater.cs" />
+    <Compile Include="log_board\MidwayTest.cs" />
+    <Compile Include="log_board\Situation.cs" />
+    <Compile Include="log_board\TestWell.cs" />
+    <Compile Include="log_board\Track.cs" />
     <Compile Include="unused form_A\Form_A_2_1.cs" />
     <Compile Include="unused form_A\Form_A_2_2.cs" />
     <Compile Include="Form_A\Form_A_3.cs" />
@@ -116,7 +136,6 @@
     <Folder Include="basic_materials\" />
     <Folder Include="evaluate_log\" />
     <Folder Include="geology_log\" />
-    <Folder Include="log_board\" />
     <Folder Include="materials_trim\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
