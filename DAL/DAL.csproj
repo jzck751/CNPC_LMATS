@@ -131,8 +131,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="resourses\cnpc_lmats_mc.sql" />
-    <Content Include="resourses\sql%281%29.sql" />
+    <Content Include="resourses\cnpc_lmats.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

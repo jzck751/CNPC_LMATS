@@ -5,13 +5,13 @@
  Source Server Type    : MySQL
  Source Server Version : 80022
  Source Host           : localhost:3306
- Source Schema         : cnpc_lmats_mc_1
+ Source Schema         : cnpc_lmats
 
  Target Server Type    : MySQL
  Target Server Version : 80022
  File Encoding         : 65001
 
- Date: 10/05/2021 23:26:11
+ Date: 11/05/2021 16:07:46
 */
 
 SET NAMES utf8mb4;
@@ -39,7 +39,7 @@ CREATE TABLE `afte_gas_de_record`  (
   `home_sec` double NULL DEFAULT NULL COMMENT '归位井段',
   `up_high` double NULL DEFAULT NULL COMMENT '上窜高度',
   `up_speed` double NULL DEFAULT NULL COMMENT '上窜速度'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of afte_gas_de_record
@@ -57,7 +57,7 @@ CREATE TABLE `aftereffect_gas_dete`  (
   `density` double NULL DEFAULT NULL COMMENT '密度',
   `viscosity` double NULL DEFAULT NULL COMMENT '粘度',
   `slot_sur_dis` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '槽面显示'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of aftereffect_gas_dete
@@ -115,7 +115,7 @@ CREATE TABLE `basic_data_sheet`  (
   `bit_pro` double NULL DEFAULT NULL COMMENT '钻头程序',
   `cas_pro` double NULL DEFAULT NULL COMMENT '套管程序',
   `remarks` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备注'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of basic_data_sheet
@@ -133,7 +133,7 @@ CREATE TABLE `carbonate_con_ana`  (
   `con_ma_cal_car` double NULL DEFAULT NULL COMMENT '碳酸镁钙含量',
   `other` double NULL DEFAULT NULL COMMENT '其他',
   PRIMARY KEY (`num`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of carbonate_con_ana
@@ -155,7 +155,7 @@ CREATE TABLE `casing_running`  (
   `hanger_pos` double NULL DEFAULT NULL COMMENT '悬挂器位置',
   `location_gra_hoop` double NULL DEFAULT NULL COMMENT '分级箍位置',
   `join_in` double NULL DEFAULT NULL COMMENT '联入'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of casing_running
@@ -177,7 +177,7 @@ CREATE TABLE `cementing`  (
   `impact_value` double NULL DEFAULT NULL COMMENT '碰压值',
   `inject_amount_is_li` double NULL DEFAULT NULL COMMENT '隔离液注入量',
   `cement_qua` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '固井质量'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of cementing
@@ -200,7 +200,7 @@ CREATE TABLE `chloride_ti_dilling`  (
   `density` double NULL DEFAULT NULL COMMENT '密度',
   `viscosity` double NULL DEFAULT NULL COMMENT '粘度',
   `examiner` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '检验人'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of chloride_ti_dilling
@@ -223,7 +223,7 @@ CREATE TABLE `chloride_ti_dilling_copy`  (
   `density` double NULL DEFAULT NULL COMMENT '密度',
   `viscosity` double NULL DEFAULT NULL COMMENT '粘度',
   `examiner` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '检验人'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of chloride_ti_dilling_copy
@@ -241,7 +241,7 @@ CREATE TABLE `complexity_treatment`  (
   `tream_process` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '处理过程',
   `release_time` time NULL DEFAULT NULL COMMENT '解除时间',
   `remarks` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备注'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of complexity_treatment
@@ -258,7 +258,7 @@ CREATE TABLE `coring_well_wall`  (
   `footage` double NULL DEFAULT NULL COMMENT '进尺',
   `core_length` double NULL DEFAULT NULL COMMENT '岩心长度',
   `harvest_rate` double NULL DEFAULT NULL COMMENT '收获率'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of coring_well_wall
@@ -280,7 +280,7 @@ CREATE TABLE `csaing_record`  (
   `reviewer` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '复查人',
   `remarks` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`num`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of csaing_record
@@ -306,7 +306,7 @@ CREATE TABLE `cuttings_description`  (
   `flu_dry_co` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '荧光干照颜色',
   `flu_con_lev` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '荧光对比级别',
   PRIMARY KEY (`num`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of cuttings_description
@@ -325,7 +325,7 @@ CREATE TABLE `density_ana_mudston`  (
   `mea_value_t` double NULL DEFAULT NULL COMMENT '测量值L2',
   `mea_dn` double NULL DEFAULT NULL COMMENT '测量值密度',
   PRIMARY KEY (`num`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of density_ana_mudston
@@ -348,7 +348,7 @@ CREATE TABLE `descr_dilling_coring`  (
   `flu_color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '荧光滴照颜色',
   `flu_cont_le` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '荧光对比级别',
   PRIMARY KEY (`core_num`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of descr_dilling_coring
@@ -365,7 +365,7 @@ CREATE TABLE `drilling_coring`  (
   `footage` double NULL DEFAULT NULL COMMENT '进尺',
   `core_length` double NULL DEFAULT NULL COMMENT '岩心长度',
   `harvest_rate` double NULL DEFAULT NULL COMMENT '收获率'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of drilling_coring
@@ -395,7 +395,7 @@ CREATE TABLE `drilling_fluif`  (
   `cl` double NULL DEFAULT NULL COMMENT '氯离子',
   `total_sal` double NULL DEFAULT NULL COMMENT '总矿化度',
   `affect_m_l_t` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '影响录井处理剂'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of drilling_fluif
@@ -412,7 +412,7 @@ CREATE TABLE `drilling_para`  (
   `mpa` double NULL DEFAULT NULL COMMENT '泵压',
   `torque` double NULL DEFAULT NULL COMMENT '扭矩',
   `su_weight` double NULL DEFAULT NULL COMMENT '悬重'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of drilling_para
@@ -424,7 +424,7 @@ CREATE TABLE `drilling_para`  (
 DROP TABLE IF EXISTS `drilling_tool_structure`;
 CREATE TABLE `drilling_tool_structure`  (
   `drill_tool_s` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '钻具结构'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of drilling_tool_structure
@@ -439,7 +439,7 @@ CREATE TABLE `engineering_abno`  (
   `well_depth` double NULL DEFAULT NULL COMMENT '井深',
   `excep_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '异常类型',
   `adoption` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '采纳情况'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of engineering_abno
@@ -454,7 +454,7 @@ CREATE TABLE `evaluation_logging`  (
   `well_secti` double NULL DEFAULT NULL COMMENT '井段',
   `num_ana_sam` int NULL DEFAULT NULL COMMENT '分析样品个数',
   `remarks` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备注'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of evaluation_logging
@@ -490,7 +490,7 @@ CREATE TABLE `frac_cavity_sta`  (
   `plaque` int NULL DEFAULT NULL COMMENT '斑块数',
   `air_pla` int NULL DEFAULT NULL COMMENT '冒气处个数',
   `connect` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '连通情况'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of frac_cavity_sta
@@ -508,7 +508,7 @@ CREATE TABLE `gas _chroa__hydca_rocks`  (
   `sam_qua` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '样品质量',
   `team_code` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT ' 组分',
   `peak_area` double NULL DEFAULT NULL COMMENT '峰面积'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of gas _chroa__hydca_rocks
@@ -520,7 +520,7 @@ CREATE TABLE `gas _chroa__hydca_rocks`  (
 DROP TABLE IF EXISTS `instrument_op_cali`;
 CREATE TABLE `instrument_op_cali`  (
   `instru_op_ca` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '仪器运行及校验'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of instrument_op_cali
@@ -533,7 +533,7 @@ DROP TABLE IF EXISTS `late_time`;
 CREATE TABLE `late_time`  (
   `measur_w_dep` double NULL DEFAULT NULL COMMENT '测量井深',
   `late_time` time NULL DEFAULT NULL COMMENT '迟到时间'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of late_time
@@ -549,7 +549,7 @@ CREATE TABLE `light_hydr_logging`  (
   `lit_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '岩性定名',
   `team_code` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '组分',
   `peak_area` double NULL DEFAULT NULL COMMENT '峰面积'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of light_hydr_logging
@@ -561,7 +561,7 @@ CREATE TABLE `light_hydr_logging`  (
 DROP TABLE IF EXISTS `lith_oil_gas_water`;
 CREATE TABLE `lith_oil_gas_water`  (
   `lith_oil_` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '岩性及油气水'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of lith_oil_gas_water
@@ -579,7 +579,7 @@ CREATE TABLE `log_board__class`  (
   `horizon` int NULL DEFAULT NULL COMMENT '层位',
   `footage` int NULL DEFAULT NULL COMMENT '进尺',
   PRIMARY KEY (`classes`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of log_board__class
@@ -595,7 +595,7 @@ CREATE TABLE `logging_work_sta`  (
   `number` int NULL DEFAULT NULL COMMENT '数量',
   `qua_col` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '数量控制',
   `remarks` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备注'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of logging_work_sta
@@ -621,7 +621,7 @@ CREATE TABLE `midway_test`  (
   `pre_con_daily` double NULL DEFAULT NULL COMMENT '初步折算流体日产量',
   `fluid_pro` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '流体性质',
   `oil_test_con` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '试油结论'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of midway_test
@@ -643,7 +643,7 @@ CREATE TABLE `natural_gamma_spe_log`  (
   `total_gamma` double NULL DEFAULT NULL COMMENT '总伽马',
   `toc` double NULL DEFAULT NULL COMMENT 'TOC',
   PRIMARY KEY (`num`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of natural_gamma_spe_log
@@ -665,7 +665,7 @@ CREATE TABLE `nuc_mag_reson`  (
   `bound_fluid` double NULL DEFAULT NULL COMMENT '束缚流体',
   `mova_wat_sat` double NULL DEFAULT NULL COMMENT '可动水饱和度',
   PRIMARY KEY (`num`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of nuc_mag_reson
@@ -694,7 +694,7 @@ CREATE TABLE `oil_gas_dis_sta`  (
   `wall_cen` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '壁心，颗',
   `log_explain` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '录井解释',
   PRIMARY KEY (`num`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of oil_gas_dis_sta
@@ -716,7 +716,7 @@ CREATE TABLE `quanti_flu_logging`  (
   `level` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '对比级别',
   `oil_index` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '油性指数',
   PRIMARY KEY (`num`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of quanti_flu_logging
@@ -745,7 +745,7 @@ CREATE TABLE `special_cond_marking`  (
   `sig_dil_te` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '钻井队签字',
   `sig_captain` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '钻井队队长签字',
   `sig_geo_su` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '地质监督签字'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of special_cond_marking
@@ -767,7 +767,7 @@ CREATE TABLE `sta_table_ana_samp`  (
   `rece_unit` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '接收单位',
   `receiver` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '接收人',
   PRIMARY KEY (`num`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sta_table_ana_samp
@@ -783,7 +783,7 @@ CREATE TABLE `stati_table_logg`  (
   `log_pro` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '测井项目',
   `rate` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '比例',
   `log_co` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '测井情况'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of stati_table_logg
@@ -810,7 +810,7 @@ CREATE TABLE `statis_dirll_co`  (
   `c_h_oil_le` double NULL DEFAULT NULL COMMENT '储蓄层不含油气岩心长度',
   `f_d_oil_le` double NULL DEFAULT NULL COMMENT '非储蓄层不含油气岩心长度',
   `remarks` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备注'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of statis_dirll_co
@@ -836,7 +836,7 @@ CREATE TABLE `strati_data_sheet`  (
   `hor_d` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '层位段',
   `hor_d_dep` double NULL DEFAULT NULL COMMENT '层位段底深',
   `hor_d_th` double NULL DEFAULT NULL COMMENT '层位段厚度'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of strati_data_sheet
@@ -854,7 +854,7 @@ CREATE TABLE `sub_sta_table_drill`  (
   `fil_vis` double NULL DEFAULT NULL COMMENT '钻井液粘度',
   `cl_cont` double NULL DEFAULT NULL COMMENT '氯离子含量',
   `dirll_flu_tr` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '钻井液处理情况'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sub_sta_table_drill
@@ -869,7 +869,7 @@ CREATE TABLE `text_well`  (
   `rate` double NULL DEFAULT NULL COMMENT '比例',
   `well_section` double NULL DEFAULT NULL COMMENT '井段',
   `remarks` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备注'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of text_well
@@ -890,7 +890,7 @@ CREATE TABLE `therm_detion_rock`  (
   `s_f` double NULL DEFAULT NULL COMMENT ' S4',
   `tmax` double NULL DEFAULT NULL COMMENT 'Tmax',
   PRIMARY KEY (`num`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of therm_detion_rock
@@ -904,7 +904,7 @@ CREATE TABLE `track`  (
   `depth_measur` double NULL DEFAULT NULL COMMENT '测斜井深',
   `well_angle` double NULL DEFAULT NULL COMMENT '井斜角',
   `azimuth` double NULL DEFAULT NULL COMMENT '方位角'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of track
@@ -921,11 +921,27 @@ CREATE TABLE `turn_head_data`  (
   `acc_footage` double NULL DEFAULT NULL COMMENT '累计进尺',
   `cum_pure_d_t` time NULL DEFAULT NULL COMMENT '累计纯钻时间',
   PRIMARY KEY (`number`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of turn_head_data
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for users
+-- ----------------------------
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users`  (
+  `Account` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Time` datetime NOT NULL,
+  `UserId` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `Password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
+-- Records of users
+-- ----------------------------
+INSERT INTO `users` VALUES ('1', '2021-05-11 16:02:59', 'root', '123456');
 
 -- ----------------------------
 -- Table structure for well_rot_cond
@@ -934,23 +950,10 @@ DROP TABLE IF EXISTS `well_rot_cond`;
 CREATE TABLE `well_rot_cond`  (
   `time` time NULL DEFAULT NULL COMMENT '时间',
   `brief_const` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '施工简况'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of well_rot_cond
--- ----------------------------
-
--- ----------------------------
--- Table structure for x_ray_fiuore_logging
--- ----------------------------
-DROP TABLE IF EXISTS `x_ray_fiuore_logging`;
-CREATE TABLE `x_ray_fiuore_logging`  (
-  `wall_dep` double NULL DEFAULT NULL COMMENT '井深',
-  `elem_cont` double NULL DEFAULT NULL COMMENT '元素含量'
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of x_ray_fiuore_logging
 -- ----------------------------
 
 -- ----------------------------
@@ -963,10 +966,23 @@ CREATE TABLE `x-ray_diff_logging`  (
   `lit_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '岩性定名',
   `miner_cont` double NULL DEFAULT NULL COMMENT '矿物含量',
   PRIMARY KEY (`num`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of x-ray_diff_logging
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for x_ray_fiuore_logging
+-- ----------------------------
+DROP TABLE IF EXISTS `x_ray_fiuore_logging`;
+CREATE TABLE `x_ray_fiuore_logging`  (
+  `wall_dep` double NULL DEFAULT NULL COMMENT '井深',
+  `elem_cont` double NULL DEFAULT NULL COMMENT '元素含量'
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
+-- Records of x_ray_fiuore_logging
 -- ----------------------------
 
 SET FOREIGN_KEY_CHECKS = 1;
