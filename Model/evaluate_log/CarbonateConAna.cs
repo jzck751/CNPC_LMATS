@@ -8,6 +8,7 @@ namespace Model.evaluate_log
 {
     public class CarbonateConAna
     {
+        //碳酸盐含量分析
         public int num { get; set; }//序号
         public double wall_dep { get; set; }//井深
         public double sam_type { get; set; }//样品类型

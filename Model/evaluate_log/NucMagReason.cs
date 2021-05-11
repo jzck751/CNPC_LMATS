@@ -8,6 +8,7 @@ namespace Model.evaluate_log
 {
     public class NucMagReason
     {
+        //核磁共振录井
         public int num { get; set; }//序号
         public string wall_dep { get; set; }//层位
         public double horizon { get; set; }//井深

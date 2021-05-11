@@ -8,6 +8,7 @@ namespace Model.geology_log
 {
     public class CuttingsDescription
     {
+        //岩屑描述
         public int num { get; set; }//序号
         public string horizon { get; set; }//层位
 

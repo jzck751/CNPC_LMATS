@@ -9,23 +9,23 @@ namespace Model.Form_A
     //_____丼钻井液氯离子滴定记录
     public class Form_A_5
     {
-        public string serialNum { get; set; }//编号
-        public double sampling_depth { get; set; }//取样井深
-        public double silver_nitrate_concentration_equivalent { get; set; }//硝酸银浓度当量
-        public double sample_volume { get; set; }//取样体积
-        public double Chlorine_root { get; set; }//氯根含量
+        public string num { get; set; }//编号
+        public double samp_well_dep { get; set; }//取样井深
+        public double silver_ni_c { get; set; }//硝酸银浓度当量
+        public double samp_v { get; set; }//取样体积
+        public double chlo_con { get; set; }//氯根含量
         public double density { get; set; }//密度
         public double viscosity { get; set; }//粘度
-        public string reviewPerson { get; set; }//检验人
+        public string examiner { get; set; }//检验人
 
         //取样时间
-        public string dateAndMonth { get; set; }//日/月
-        public string hourAndMinute { get; set; }//时/分
+        public string samp_time_d { get; set; }//日/月
+        public string samp_time_m { get; set; }//时/分
 
         //硝酸银用量
-        public string before_the_titration { get; set; }//滴定前
-        public string after_the_titration { get; set; }//滴定后
-        public string consumption { get; set; }//消耗量
+        public string silv_ni_q { get; set; }//滴定前
+        public string silv_ni_l { get; set; }//滴定后
+        public string silv_ni_co { get; set; }//消耗量
 
         ////取样时间
         //struct sample_time{

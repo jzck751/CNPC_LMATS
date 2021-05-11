@@ -8,6 +8,7 @@ namespace Model.evaluate_log
 {
     public class GasChroaHydcaRocks
     {
+        //岩石热蒸发烃气相色谱
         public double wall_dep { get; set; }//丼深
         public string horizon { get; set; }//层位
         public string lit_name { get; set; }//岩性定名

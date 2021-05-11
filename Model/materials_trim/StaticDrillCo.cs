@@ -9,6 +9,7 @@ namespace Model.materials_trim
 {
     public class StaticDrillCo
     {
+        //钻井取心统计表
         public int time_core { get; set; }//取心筒次
         public string horizon { get; set; }//层位
         public double well_sec { get; set; }//井段

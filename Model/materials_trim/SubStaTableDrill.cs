@@ -8,6 +8,7 @@ namespace Model.materials_trim
 {
     public class SubStaTableDrill
     {
+        //钻井液性能分段统计表
         public string well_dep { get; set; }//层位
         public double well_sec { get; set; }//井段
         public string dirll_fil { get; set; }//钻井液体系

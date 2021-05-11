@@ -14,5 +14,5 @@ namespace Model.log_board
         public string type { get; set; }//类型
         public double acc_footage { get; set; }//累计进尺
         public string cum_pure_d_t { get; set; }//累计纯钻时间
-    }
+    } 
 }

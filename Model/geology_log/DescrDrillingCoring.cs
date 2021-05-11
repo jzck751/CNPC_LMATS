@@ -8,6 +8,7 @@ namespace Model.geology_log
 {
     public class DescrDrillingCoring
     {
+        //钻井取心
         public int core_num { get; set; }//岩心编号
         public string wear_cond { get; set; }//磨损情况
         public double total_leng { get; set; }//累计长度
@@ -15,6 +16,7 @@ namespace Model.geology_log
         public int lith_name_co { get; set; }//岩性定名颜色
         public string lith_name_oil { get; set; }//岩性定名含油级别
         public double lith_name_lith { get; set; }//岩性定名岩性
+        public string lit_des_wat { get; set; }//油气水描述
         public int flu_wet { get; set; }//荧光湿照颜色
         public int flu_color { get; set; }//荧光滴照颜色
         public string flu_cont_le { get; set; }//荧光对比级别

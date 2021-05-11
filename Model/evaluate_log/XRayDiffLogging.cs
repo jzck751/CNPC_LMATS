@@ -8,6 +8,7 @@ namespace Model.evaluate_log
 {
     public class XRayDiffLogging
     {
+        //X射线衍射矿物录井
         public int num { get; set; }//序号
         public double wall_dep { get; set; }//井深
         public string lit_name { get; set; }//岩性定名

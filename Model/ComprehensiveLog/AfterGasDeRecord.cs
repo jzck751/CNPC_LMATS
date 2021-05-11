@@ -8,6 +8,7 @@ namespace Model.ComprehensiveLog
 {
     public class AfterGasDeRecord
     {
+        //后效气检测
         public string date { get; set; }//日期
         public double well_dep { get; set; }//井深
         public double dill_loca { get; set; }//钻头位置

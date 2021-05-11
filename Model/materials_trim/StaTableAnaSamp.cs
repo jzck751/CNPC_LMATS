@@ -8,6 +8,7 @@ namespace Model.materials_trim
 {
     public class StaTableAnaSamp
     {
+        //化验样品统计表
         public int num { get; set; }//序号
         public string samp_time { get; set; }//取样日期
         public string well_dep { get; set; }//层位

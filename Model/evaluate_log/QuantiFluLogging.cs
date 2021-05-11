@@ -8,6 +8,7 @@ namespace Model.evaluate_log
 {
     public class QuantiFluLogging
     {
+        //定量荧光分析
         public int num { get; set; }//序号
         public int wall_num { get; set; }//丼号
         public double well_dep { get; set; }//井深

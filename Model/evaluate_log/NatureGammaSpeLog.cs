@@ -9,6 +9,7 @@ namespace Model.evaluate_log
 {
     public class NatureGammaSpeLog
     {
+        //伽马
         public int num { get; set; }//序号
         public string horizon { get; set; }//层位
         public double wall_dep { get; set; }//井深

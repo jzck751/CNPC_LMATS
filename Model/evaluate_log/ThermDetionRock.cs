@@ -8,6 +8,7 @@ namespace Model.evaluate_log
 {
     public class ThermDetionRock
     {
+        //岩石热分解（三峰）
         public int num { get; set; }//序号
         public double wall_dep { get; set; }//井深
         public string lit_name { get; set; }//岩心定名

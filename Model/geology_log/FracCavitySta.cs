@@ -8,6 +8,7 @@ namespace Model.geology_log
 {
     public class FracCavitySta
     {
+        //缝洞统计
         public int time_cor { get; set; }//取心筒次
         public double well_sec { get; set; }//井段
         public int cori_num { get; set; }//岩心编号
@@ -43,8 +44,8 @@ namespace Model.geology_log
         public string cave_fil { get; set; }//填充物
 
         //直径
-        public bool diameter_greater_than_ten { get; set; }//大于10
+        public bool cave_diam_10 { get; set; }//大于10
         public bool cave_diam_5_10 { get; set; }//5-10
-        public bool cave_diam_10 { get; set; }//小于5
+        public bool cave_diam_5 { get; set; }//小于5
     }
 }

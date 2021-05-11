@@ -8,6 +8,7 @@ namespace Model.evaluate_log
 {
     public class DensityAnaMudston
     {
+        //泥页岩密度分析
         public int num { get; set; }//序号
         public double horizon { get; set; }//层位
         public double wall_dep { get; set; }//井深

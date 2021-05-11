@@ -8,6 +8,7 @@ namespace Model.evaluate_log
 {
     public class XRayFiuoreLogging
     {
+        //X射线荧光元素录井
         public double wall_dep { get; set; }//井深
 
         //元素含量

@@ -8,6 +8,7 @@ namespace Model.materials_trim
 {
     public class OilGasDisSta
     {
+        //含油气性解释成果表
         public int num { get; set; }//序号
         public string horizon { get; set; }//层位
         public double well_sec { get; set; }//井段
