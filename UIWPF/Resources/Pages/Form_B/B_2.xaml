@@ -19,17 +19,17 @@
                   AutoGenerateColumns="True">
             
             <DataGrid.Columns>
-                <DataGridTextColumn Width="70" Header="序号" Binding="{Binding serialNumber}"/>
-                <DataGridTextColumn Width="70" Header="层位" Binding="{Binding serialNumber}"/>
-                <DataGridTextColumn Width="100" Header="井段顶深" Binding="{Binding serialNumber}"/>
-                <DataGridTextColumn Width="100" Header="井段底深" Binding="{Binding serialNumber}"/>
-                <DataGridTextColumn Width="100" Header="岩颜色" Binding="{Binding serialNumber}"/>
-                <DataGridTextColumn Width="100" Header="含油级别" Binding="{Binding serialNumber}"/>
-                <DataGridTextColumn Width="100" Header="岩性" Binding="{Binding serialNumber}"/>
-                <DataGridTextColumn Width="200" Header="岩性及含油气水描述" Binding="{Binding serialNumber}"/>
-                <DataGridTextColumn Width="100" Header="定名岩屑占岩屑" Binding="{Binding serialNumber}" />
-                <DataGridTextColumn Width="100" Header="含油岩屑占定名岩屑" Binding="{Binding serialNumber}"/>
-                <DataGridTextColumn Width="100" Header="荧光湿照颜色" Binding="{Binding serialNumber}"/>
+                <DataGridTextColumn Width="70" Header="序号" Binding="{Binding serialNumber}" />
+                <DataGridTextColumn Width="70" Header="层位" Binding="{Binding position}"/>
+                <DataGridTextColumn Width="100" Header="井段顶深" Binding="{Binding topDepth}"/>
+                <DataGridTextColumn Width="100" Header="井段底深" Binding="{Binding bottomDepth}"/>
+                <DataGridTextColumn Width="100" Header="岩颜色" Binding="{Binding lithology}"/>
+                <DataGridTextColumn Width="100" Header="含油级别" Binding="{Binding lithologyAndDescriptionOfHydrocarbonAndWater}"/>
+                <DataGridTextColumn Width="100" Header="岩性" Binding="{Binding wetAccordingToColor}"/>
+                <DataGridTextColumn Width="200" Header="岩性及含油气水描述" Binding="{Binding dryAccordingToColor}"/>
+                <DataGridTextColumn Width="100" Header="定名岩屑占岩屑" Binding="{Binding contrastLevel}" />
+                <DataGridTextColumn Width="100" Header="含油岩屑占定名岩屑" Binding="{Binding oilBearingCuttingsAreNamedCuttings}"/>
+                <DataGridTextColumn Width="100" Header="荧光湿照颜色" Binding="{Binding designatedCuttingsOfCuttings}"/>
                 <DataGridTextColumn Width="100" Header="荧光滴照颜色" Binding="{Binding serialNumber}"/>
                 <DataGridTextColumn Width="100" Header="荧光干照颜色" Binding="{Binding serialNumber}"/>
                 <DataGridTextColumn Width="100" Header="荧光对比级别" Binding="{Binding serialNumber}"/>
