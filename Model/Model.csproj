@@ -61,6 +61,7 @@
     <Compile Include="evaluate_log\XRayFiuoreLogging.cs" />
     <Compile Include="Form_A\Form_A_1.cs" />
     <Compile Include="Form_A\Form_A_2.cs" />
+    <Compile Include="Form_B\FormKeyValuePairB.cs" />
     <Compile Include="geology_log\ChlorideTiDrilling.cs" />
     <Compile Include="geology_log\CsaingRecord.cs" />
     <Compile Include="geology_log\CuttingsDescription.cs" />

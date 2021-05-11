@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,10 +18,47 @@ namespace UIWPF.Resources.Windows
     /// </summary>
     public partial class DataCollection_EditPanel : Window
     {
+        //Pages.Form_B.B_2 b_2 = new Pages.Form_B.B_2();
+        Pages.FormPage FormPage = new Pages.FormPage();
+
         public DataCollection_EditPanel()
         {
             InitializeComponent();
-            this.testFrame.Navigate(new Resources.Pages.Form_B.B_test());
+            
+            this.testFrame.Navigate(FormPage);
         }
+
+        private void save_Click(object sender, RoutedEventArgs e)
+        {
+            string select = "select * from mc_rock_describe_record";
+            MySqlConnectionStringBuilder connectionString = new MySqlConnectionStringBuilder();
+            connectionString.Server = "localhost";
+            connectionString.UserID = "root";
+            connectionString.Password = "123456";
+            connectionString.Database = "cnpc_lmats";
+            connectionString.AllowUserVariables = true;
+            MySqlConnection connection = new MySqlConnection(connectionString.ToString());
+            MySqlCommand cmd = new MySqlCommand("select * from mc_rock_describe_record", connection);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(select, connection);
+            MySqlCommandBuilder builder = new MySqlCommandBuilder(adapter);
+            connection.Open();
+            adapter.Update(FormPage.GetData());
+            connection.Close();
+            
+        }
+
+        private void formSwitch_Click(object sender, RoutedEventArgs e)
+        {
+            var item = sender as MenuItem;
+            if(item!=null)
+            {
+                FormPage.setFormKey(item.Name);
+                FormPage.loadData();
+            }
+                
+            
+
+        }
+
     }
 }

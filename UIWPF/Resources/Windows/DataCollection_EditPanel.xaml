@@ -21,9 +21,20 @@
         <DockPanel Grid.ColumnSpan="2"
                    Background="#FF464775">
             <Menu x:Name="menuBar" Background="#FF464775">
-                <MenuItem Header="文件" Height="20" Foreground="White" FontSize="14">
+                <MenuItem Header="文件" Height="20"  Foreground="White" FontSize="14">
                     <MenuItem Header="新建" Height="20"/>
                     <MenuItem Header="打开" Height="20"/>
+                    <MenuItem Height="20" Click="save_Click" >
+                        <MenuItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="&#xE74E;"
+                                       FontFamily="Segoe MDL2 Assets"
+                                       Foreground="White"/>
+                                <ContentPresenter Content="保存"/>
+                            </StackPanel>
+                        </MenuItem.Header>
+                        
+                    </MenuItem>
                     <Separator/>
                     <MenuItem Header="导入" Height="20">
                         <MenuItem Header="随钻导入"/>
@@ -36,7 +47,89 @@
                     
                 </MenuItem>
                 <MenuItem Header="编辑" Height="20" Foreground="White" FontSize="14">
-
+                    
+                </MenuItem>
+                <MenuItem Header="菜单" Height="20" Foreground="White" FontSize="14"/>
+                <MenuItem Header="基础资料" Height="20" Foreground="White" FontSize="14">
+                    <MenuItem Header="基本数据" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="施工队伍" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="层位设计" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="钻头设计" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="套管设计" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="钻井液设计" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="井眼轨迹设计" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="钻井进度设计" Height="20" Click="formSwitch_Click"/>
+                    
+                </MenuItem>
+                <MenuItem Header="录井班报" Height="20" Foreground="White" FontSize="14">
+                    <MenuItem Header="班报基本数据" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="钻井工况" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="钻头数据" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="钻具结构" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="钻井参数" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="钻井液" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="迟到时间" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="岩性及油气水" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="评价录井" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="仪器运行及校验" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="工程异常" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="实际井眼轨迹" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="钻井取心" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="井壁取心" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="后效气检测" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="复杂及处理" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="测井" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="下套管" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="固井" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="中途测试" Height="20" Click="formSwitch_Click"/>
+                </MenuItem>
+                <MenuItem Header="资料整理" Height="20" Foreground="White" FontSize="14">
+                    
+                </MenuItem>
+                <MenuItem Header="综合录井" Height="20" Foreground="White" FontSize="14">
+                    <MenuItem Header="TCP" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="UDP" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="数据库" Height="20" Click="formSwitch_Click"/>
+                    <Separator/>
+                    <MenuItem Header="气测录井" Height="20">
+                        <MenuItem Header="钻时器测数据" Height="20" Click="formSwitch_Click"/>
+                        <MenuItem Header="钻井液热真空蒸馏" Height="20" Click="formSwitch_Click"/>
+                        <MenuItem Header="后效气检测" Height="20" Click="formSwitch_Click"/>
+                        <MenuItem Header="气体校验" Height="20" Click="formSwitch_Click"/>
+                    </MenuItem>
+                    <MenuItem Header="工程录井" Height="20">
+                        <MenuItem Header="工程异常" Height="20"/>
+                        <MenuItem Header="复杂及处理" Height="20"/>
+                    </MenuItem>
+                    <MenuItem Header="自动获取工况" Height="20"/>
+                    
+                </MenuItem>
+                <MenuItem Header="地质录井" Height="20" Foreground="White" FontSize="14">
+                    <MenuItem Header="地质分层" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="岩屑描述" Height="20" Name="B_2" Click="formSwitch_Click"/>
+                    <MenuItem Header="钻井取心描述" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="井壁取心描述" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="缝洞统计" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="钻井液氯离子测定" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="钻头程序" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="套管记录" Height="20" Click="formSwitch_Click"/>
+                    <MenuItem Header="特殊工况描述" Height="20" Click="formSwitch_Click"/>
+                </MenuItem>
+                <MenuItem Header="评价录井" Height="20" Foreground="White" FontSize="14">
+                    <MenuItem Header="泥页岩密度分析" Height="20"/>
+                    <MenuItem Header="碳酸盐含量分析" Height="20"/>
+                    <MenuItem Header="定量荧光录井" Height="20"/>
+                    <MenuItem Header="岩石热解地球化学录井" Height="20"/>
+                    <MenuItem Header="岩石热蒸发烃气相色谱录井" Height="20"/>
+                    <MenuItem Header="轻烃录井" Height="20"/>
+                    <MenuItem Header="核磁共振录井" Height="20"/>
+                    <MenuItem Header="X射线衍射矿物录井" Height="20"/>
+                    <MenuItem Header="X射线荧光元素录井" Height="20"/>
+                    <MenuItem Header="自然伽马能谱录井" Height="20"/>
+                    
+                </MenuItem>
+                <MenuItem Header="帮助" Height="20" Foreground="White" FontSize="14">
+                    
                 </MenuItem>
             </Menu>
 
