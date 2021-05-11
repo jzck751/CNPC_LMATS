@@ -20,7 +20,7 @@ namespace UIWPF.Resources.Pages.Form_B
     /// </summary>
     public partial class B_2 : Page
     {
-        
+        DataTable dt = new DataTable();
 
         public B_2()
         {
@@ -45,8 +45,8 @@ namespace UIWPF.Resources.Pages.Form_B
             //connection.Open();
             //DataTable dt = new DataTable();
 
-            string sql = "select * from mc_rock_describe_record";
-            DataTable dt = DbManager.Ins.ExcuteDataTable(sql);
+            string sql = "select * as description from mc_rock_describe_record";
+            dt = DbManager.Ins.ExcuteDataTable(sql);
 
 
             //dt.Load(cmd.ExecuteReader());
@@ -55,6 +55,11 @@ namespace UIWPF.Resources.Pages.Form_B
             dataGrid.ItemsSource = dt.DefaultView;
 
             
+        }
+
+        public DataTable GetData()
+        {
+            return dt;
         }
     }
 }

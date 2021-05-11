@@ -1,0 +1,20 @@
+﻿<Page x:Class="UIWPF.Resources.Pages.FormPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UIWPF.Resources.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="FormPage"
+      Background="#FFD7E4F2">
+
+    <Grid>
+        <DataGrid Background="#FFD7E4F2"
+                  Name="dtGrid" 
+                  ItemsSource="{Binding}"
+                  AutoGenerateColumns="True">
+            
+        </DataGrid>
+    </Grid>
+</Page>

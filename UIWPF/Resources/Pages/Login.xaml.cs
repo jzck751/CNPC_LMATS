@@ -18,6 +18,8 @@ namespace UIWPF.Resources.Pages
     public partial class Login : Window
     {
         public static Model.LoginForm.UserInfo globalUser { get; set; }
+        Windows.DataCollection_EditPanel editPanel = new Windows.DataCollection_EditPanel();
+        
         public Login()
         {
             InitializeComponent();
@@ -99,8 +101,8 @@ namespace UIWPF.Resources.Pages
                     this.Dispatcher.Invoke(
                         new Action(() =>
                         {
-                            MainWindow mainWindow = new MainWindow();
-                            mainWindow.Show();
+                            
+                            editPanel.Show();
                             this.Close();
                         }));
                 }
