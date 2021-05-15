@@ -30,7 +30,8 @@ namespace UIWPF.Resources.Windows
 
         private void save_Click(object sender, RoutedEventArgs e)
         {
-            string select = "select * from mc_rock_describe_record";
+            string select = "select * from ";
+            select += FormPage.getFormName();
             MySqlConnectionStringBuilder connectionString = new MySqlConnectionStringBuilder();
             connectionString.Server = "localhost";
             connectionString.UserID = "root";
@@ -54,8 +55,9 @@ namespace UIWPF.Resources.Windows
             {
                 FormPage.setFormKey(item.Name);
                 FormPage.loadData();
+                ShowTab.Header = FormPage.getFormTitle();
             }
-                
+            
             
 
         }

@@ -23,6 +23,8 @@ namespace UIWPF.Resources.Pages
     {
         //the key of the current form
         string formKey = null;
+        string formName = null;
+        string formTitle = null;
         public FormPage()
         {
             InitializeComponent();
@@ -36,7 +38,7 @@ namespace UIWPF.Resources.Pages
             //dtGrid = new DataGrid();
             
             string sql = "select * from ";
-            string formName = null;
+            
             if (Model.Form_B.FormKeyValuePairB.formBDIc.TryGetValue(formKey, out formName))
                 sql += formName;
             else
@@ -60,6 +62,22 @@ namespace UIWPF.Resources.Pages
             connection.Close();
             dtGrid.ItemsSource = dt.DefaultView;
 
+            string headerName = null;
+            
+            //update the commented form name
+            //Change the header
+            if (Model.Form_B.FormKeyValuePairB.formBNameDIc.TryGetValue(formName, out formTitle))
+            {
+
+            }
+            foreach (var items in dtGrid.Columns)
+            {
+                if (Model.Form_B.FormKeyValuePairB.formBNameDIc.TryGetValue(items.Header.ToString(), out headerName))
+                {
+                    items.Header = headerName;
+                }
+            }
+
         }
 
         public DataTable GetData()
@@ -71,6 +89,16 @@ namespace UIWPF.Resources.Pages
         {
             formKey = btnKey;
             return;
+        }
+
+        public string getFormName()
+        {
+            return formName;
+        }
+
+        public string getFormTitle()
+        {
+            return formTitle;
         }
     }
 }
