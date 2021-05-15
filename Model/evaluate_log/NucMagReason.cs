@@ -15,9 +15,9 @@ namespace Model.evaluate_log
         public string lit_name { get; set; }//岩性定名
 
 
-        public double porosity { get; set; }//孔隙度
-        public double permea { get; set; }//渗透率
-        public double oil_satur { get; set; }//含油饱和度
+        public double porosity1 { get; set; }//孔隙度
+        public double permea1 { get; set; }//渗透率
+        public double oil_satur1 { get; set; }//含油饱和度
         public double lipuidty { get; set; }//可动流体
         public double bound_fluid { get; set; }//束缚流体
         public double mova_wat_sat { get; set; }//可动水饱和度

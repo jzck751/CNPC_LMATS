@@ -10,10 +10,7 @@ namespace Model.log_board
     {
         //钻井参数
         public double wob { get; set; }//钻压
-        public int rota_num_
-        
-        
-        { get; set; }//转盘转数
+        public int rota_num_{ get; set; }//转盘转数
         public double displact { get; set; }//排量
         public double mpa { get; set; }//泵压
         public double torque { get; set; }//扭矩

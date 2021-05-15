@@ -30,11 +30,16 @@ namespace UIWPF.Resources.Pages
 
         DataTable dt = new DataTable();
 
+        public void clear()
+        {
+            dtGrid.Items.Clear();
+        }
+
         public void loadData()
         {
-            
+
             //dtGrid = new DataGrid();
-            
+
             string sql = "select * from ";
             string formName = null;
             if (Model.Form_B.FormKeyValuePairB.formBDIc.TryGetValue(formKey, out formName))
@@ -47,17 +52,22 @@ namespace UIWPF.Resources.Pages
 
             //dt = DbManager.Ins.ExcuteDataTable(sql);
 
-            MySqlConnectionStringBuilder connectionString = new MySqlConnectionStringBuilder();
-            connectionString.Server = "localhost";
-            connectionString.UserID = "root";
-            connectionString.Password = "123456";
-            connectionString.Database = "cnpc_lmats";
-            connectionString.AllowUserVariables = true;
-            MySqlConnection connection = new MySqlConnection(connectionString.ToString());
-            MySqlCommand cmd = new MySqlCommand(sql, connection);
-            connection.Open();
-            dt.Load(cmd.ExecuteReader());
-            connection.Close();
+            //MySqlConnectionStringBuilder connectionString = new MySqlConnectionStringBuilder();
+            //connectionString.Server = "localhost";
+            //connectionString.UserID = "root";
+            //connectionString.Password = "123456";
+            //connectionString.Database = "cnpc_lmats";
+            //connectionString.AllowUserVariables = true;
+            //MySqlConnection connection = new MySqlConnection(connectionString.ToString());
+            //MySqlCommand cmd = new MySqlCommand(sql, connection);
+            //connection.Open();
+            ////dt.Load(cmd.ExecuteReader());
+            //connection.Close();
+
+            dt = DbManager.Ins.ExcuteDataTable(sql);
+
+            dtGrid.ItemsSource = null;
+            //dtGrid.Items.Clear();
             dtGrid.ItemsSource = dt.DefaultView;
 
         }
@@ -65,6 +75,16 @@ namespace UIWPF.Resources.Pages
         public DataTable GetData()
         {
             return dt;
+        }
+
+        public int UpdateTable()
+        {
+            int rows = 0;
+            //MySqlCommandBuilder buider = new MySqlCommandBuilder(adapter);
+
+            //rows = adapter.Update(data, table);
+            return rows;
+
         }
 
         public void setFormKey(string btnKey)

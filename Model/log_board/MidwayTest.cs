@@ -16,7 +16,7 @@ namespace Model.log_board
         public string work_fluid_type { get; set; }//工作液类型
         public string test { get; set; }//测试工艺
         public string test_location { get; set; }//测试器座封位置
-        public string seat_seal_pos { get; set; }//座封时间
+        public string seat_seal_time { get; set; }//座封时间
         public string unseal_time { get; set; }//解封时间
         public string well_op_clos_ti { get; set; }//开关井时间
         public string dis_well_op { get; set; }//开丼时显示情况

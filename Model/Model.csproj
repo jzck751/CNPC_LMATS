@@ -46,8 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base_Class\Form_B_threePeak_and_fivePeak.cs" />
-    <Compile Include="Base_Class\lithology_and_oil-gas-water_fluorescence.cs" />
     <Compile Include="ComprehensiveLog\AfterGasDeRecord.cs" />
     <Compile Include="evaluate_log\CarbonateConAna.cs" />
     <Compile Include="evaluate_log\DensityAnaMudston.cs" />
@@ -59,14 +57,14 @@
     <Compile Include="evaluate_log\ThermDetionRock.cs" />
     <Compile Include="evaluate_log\XRayDiffLogging.cs" />
     <Compile Include="evaluate_log\XRayFiuoreLogging.cs" />
-    <Compile Include="Form_A\Form_A_1.cs" />
-    <Compile Include="Form_A\Form_A_2.cs" />
     <Compile Include="Form_B\FormKeyValuePairB.cs" />
     <Compile Include="geology_log\ChlorideTiDrilling.cs" />
     <Compile Include="geology_log\CsaingRecord.cs" />
     <Compile Include="geology_log\CuttingsDescription.cs" />
     <Compile Include="geology_log\DescrDrillingCoring.cs" />
     <Compile Include="geology_log\FracCavitySta.cs" />
+    <Compile Include="materials_trim\StatiTableLogg.cs" />
+    <Compile Include="materials_trim\StratiDataSheet.cs" />
     <Compile Include="un\SpecialCondMarking.cs" />
     <Compile Include="geology_log\WellCoring.cs" />
     <Compile Include="log_board\AfterEffectGasDete.cs" />
@@ -95,17 +93,6 @@
     <Compile Include="materials_trim\StaTableAnaSamp.cs" />
     <Compile Include="materials_trim\StaticDrillCo.cs" />
     <Compile Include="materials_trim\SubStaTableDrill.cs" />
-    <Compile Include="unused form_A\Form_A_2_1.cs" />
-    <Compile Include="unused form_A\Form_A_2_2.cs" />
-    <Compile Include="Form_A\Form_A_3.cs" />
-    <Compile Include="Form_A\Form_A_4.cs" />
-    <Compile Include="unused form_A\Form_A_4_1.cs" />
-    <Compile Include="unused form_A\Form_A_4_2.cs" />
-    <Compile Include="unused form_A\Form_A_4_3.cs" />
-    <Compile Include="Form_A\Form_A_5.cs" />
-    <Compile Include="unused form_A\Form_A_5_1.cs" />
-    <Compile Include="unused form_A\Form_A_5_2.cs" />
-    <Compile Include="Form_A\Form_A_6.cs" />
     <Compile Include="LoginForm\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -8,6 +8,7 @@ namespace Model.geology_log
 {
     public class ChlorideTiDrilling
     {
+        //钻井液氯离子滴定记录
 
         public string num { get; set; }//编号
         public double samp_well_dep { get; set; }//取样井深

@@ -12,6 +12,8 @@ namespace Model.evaluate_log
         public double wall_dep { get; set; }//井深
 
         //元素含量
-        public double elem_cont { get; set; }//元素1含量
+        public double elem_cont1 { get; set; }//元素1含量
+        public double elem_cont2 { get; set; }//元素2含量
+
     }
 }
