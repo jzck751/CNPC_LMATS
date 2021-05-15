@@ -199,7 +199,7 @@
 
         <!--Tab-->
         <TabControl x:Name="dataCollTab" Grid.Row="2" Grid.Column="1" Background="#FFD7E4F2">
-            <TabItem Header="Test">
+            <TabItem Name="ShowTab" Header="Test">
                 <Grid>
                     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
 
