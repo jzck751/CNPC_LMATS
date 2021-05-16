@@ -3,13 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:UIWPF.Resources.Windows"
+        xmlns:local="clr-namespace:UIWPF.Resources.Windows" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        WindowStyle="ThreeDBorderWindow"
+        WindowStyle="None"
         Title="数据采集编辑面板" Height="900" Width="1600"
         Background="#FFD7E4F2">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="20"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
@@ -18,7 +19,109 @@
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+        <DockPanel Height="40" 
+                   MouseMove="TitleBar_MouseMove" 
+                   MouseDown="TitleBar_MouseDown" 
+                   Background="#FF464775" 
+                   VerticalAlignment="Top" 
+                   Grid.ColumnSpan="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="22*"/>
+                    <ColumnDefinition Width="13*"/>
+                    <ColumnDefinition Width="15*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <TextBlock x:Name="txtTitle" 
+                       Grid.Column="2"
+                       Margin="1,0,0,0"  
+                       Padding="5,3,2,3" 
+                       Text="录井资料采集与整理系统" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       FontFamily="微软雅黑"  
+                       Foreground="White"/>
+
+                <StackPanel Grid.Column="6" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="MinBtn"                 
+                        Style="{StaticResource MaterialDesignFlatButton}" 
+                        FontFamily="Segoe MDL2 Assets"
+                        Content="&#xE921;" 
+                        HorizontalAlignment="Right" 
+                        VerticalAlignment="Center"
+                        Height="40"
+                        Width="50" Cursor="Hand"
+                        FontSize="12"
+                        Click="btn_min_Click"
+                        Foreground="White"/>
+                    <Button x:Name="MaxBtn"                        
+                        Style="{StaticResource MaterialDesignFlatButton}" 
+                        FontFamily="Segoe MDL2 Assets"
+                        Content="&#xE922;" 
+                        HorizontalAlignment="Right" 
+                        VerticalAlignment="Center"
+                        Height="40"
+                        Width="50" FontSize="12"
+                        Click="btn_max_Click" 
+                        Foreground="White"
+                        Cursor="Hand"/>
+                    <Button x:Name="CloseBtn"     
+                        materialDesign:RippleAssist.Feedback="Red"
+                        Style="{StaticResource MaterialDesignFlatButton}" 
+                        FontFamily="Segoe MDL2 Assets"
+                        Content="&#xE894;" 
+                        HorizontalAlignment="Right" 
+                        Height="40"
+                        VerticalAlignment="Center"
+                        Width="50" FontSize="12"
+                        Click="btn_close_Click"
+                        Foreground="White"
+                        Cursor="Hand"/>
+
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PopupBox 
+                        materialDesign:RippleAssist.Feedback="Transparent"
+                        Grid.Column="0"
+                        PlacementMode="BottomAndAlignLeftEdges"
+                        StaysOpen="False">
+                        <StackPanel Width="150"
+                                    Opacity="0.8"
+                                    Background="White"
+                                    >
+                            <Button Content="关于"
+                                    FontFamily="Assets/Fonts/#NotoSansSC"
+                                    />
+                            <Button Content="帮助"
+                                    FontFamily="Assets/Fonts/#NotoSansSC"
+                                    />
+                            <Button Content="设置"
+                                    FontFamily="Assets/Fonts/#NotoSansSC"
+                                    />
+                            <Separator/>
+                            <Button Content="登出"
+                                    FontFamily="Assets/Fonts/#NotoSansSC"
+                                    Click="sign_out_Click"
+                                    />
+                        </StackPanel>
+                    </materialDesign:PopupBox>
+                    <Rectangle Stroke="LightGray" />
+                    <Label x:Name="AccountUserName"
+                           Content=""
+                           Foreground="White"
+                           VerticalContentAlignment="Center"
+                           Margin="6"/>
+                </StackPanel>
+
+            </Grid>
+
+        </DockPanel>
         <DockPanel Grid.ColumnSpan="2"
+                   Grid.Row="1"
                    Background="#FF464775">
             <Menu x:Name="menuBar" Background="#FF464775">
                 <MenuItem Header="文件" Height="20"  Foreground="White" FontSize="14">
@@ -162,7 +265,7 @@
             </Menu>
 
         </DockPanel>
-        <StackPanel Grid.Row="1" Grid.ColumnSpan="2">
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
             <ToolBarTray Grid.Row="1" Grid.ColumnSpan="2" Background="#FF464775">
                 <ToolBar Background="#FF464775" Height="30">
                     <Button x:Name="Undo"
@@ -189,7 +292,7 @@
             </ToolBarTray>
         </StackPanel>
 
-        <DockPanel Grid.Row="2" >
+        <DockPanel Grid.Row="3" >
             <StackPanel Orientation="Vertical" Background="#FF696884" >
                 <Label Content="ToolBox" Foreground="White" FontFamily="微软雅黑" Margin="5,0,0,0"/>
                 <Separator/>
@@ -198,7 +301,7 @@
         </DockPanel>
 
         <!--Tab-->
-        <TabControl x:Name="dataCollTab" Grid.Row="2" Grid.Column="1" Background="#FFD7E4F2">
+        <TabControl x:Name="dataCollTab" Grid.Row="3" Grid.Column="1" Background="#FFD7E4F2">
             <TabItem Name="ShowTab" Header="Welcome">
                 <Grid>
                     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
