@@ -9,6 +9,7 @@ namespace Model.Form_B
     public static class FormKeyValuePairB
     {
         public static Dictionary<string, string> formBDIc = new Dictionary<string, string>();
+        public static Dictionary<string, string> formBNameDIc = new Dictionary<string, string>();
         static FormKeyValuePairB()
         {
 
@@ -70,6 +71,18 @@ namespace Model.Form_B
             formBDIc.Add("D_6", "stati_table_logg");
             formBDIc.Add("D_7", "statis_dirll_co");
             formBDIc.Add("D_8", "sta_table_ana_samp");
+
+            //
+            formBNameDIc.Add("cuttings_description", "岩屑记录");
+            formBNameDIc.Add("num", "序号");
+            formBNameDIc.Add("horizon", "层位");
+            formBNameDIc.Add("top_dep_well", "顶深");
+            formBNameDIc.Add("bot_dep_well", "底深");
+            formBNameDIc.Add("litholo_color", "颜色");
+            formBNameDIc.Add("litholo_oil", "含油级别");
+            formBNameDIc.Add("lithology", "岩性");
+            formBNameDIc.Add("lit_descr", "岩性及含油气水描述");
+            formBNameDIc.Add("flu_color", "湿照颜色");
         }
 
     }

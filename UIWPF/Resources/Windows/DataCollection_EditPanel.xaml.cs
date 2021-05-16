@@ -25,7 +25,7 @@ namespace UIWPF.Resources.Windows
         {
             InitializeComponent();
             
-            this.testFrame.Navigate(FormPage);
+            this.testFrame.Navigate(new Pages.WelcomePage());
         }
 
         private void save_Click(object sender, RoutedEventArgs e)
@@ -53,6 +53,7 @@ namespace UIWPF.Resources.Windows
             var item = sender as MenuItem;
             if(item!=null)
             {
+                this.testFrame.Navigate(FormPage);
                 FormPage.setFormKey(item.Name);
                 FormPage.loadData();
                 ShowTab.Header = FormPage.getFormTitle();
