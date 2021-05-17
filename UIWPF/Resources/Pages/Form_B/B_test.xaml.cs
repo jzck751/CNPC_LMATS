@@ -32,7 +32,7 @@ namespace UIWPF.Resources.Pages.Form_B
         {
 
             Console.WriteLine("3487564895748975238947593824759842");
-            string sql = "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'cnpc_lmats';";
+            string sql = "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'cnpc_lmats1';";
             DataTable dtable = DbManager.Ins.ExcuteDataTable(sql);
             foreach (DataRow dr2 in dtable.Rows)
             {
