@@ -31,7 +31,7 @@ namespace DAL.DBUtils
             connectionString.Server = "localhost";
             connectionString.UserID = "root";
             connectionString.Password = "123456";
-            connectionString.Database = "cnpc_lmats";
+            connectionString.Database = "cnpc_lmats1";
             connectionString.AllowUserVariables = true;
 
             this.connStr = connectionString.ToString();
