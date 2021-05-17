@@ -25,6 +25,7 @@ namespace UIWPF.Resources.Pages
         string formKey = null;
         string formName = null;
         string formTitle = null;
+        
         public FormPage()
         {
             InitializeComponent();
@@ -118,6 +119,8 @@ namespace UIWPF.Resources.Pages
 
         public string getFormTitle()
         {
+            if (formTitle == null)
+                return "Name Not Found";
             return formTitle;
         }
     }
