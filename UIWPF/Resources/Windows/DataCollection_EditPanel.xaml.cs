@@ -40,7 +40,7 @@ namespace UIWPF.Resources.Windows
             connectionString.AllowUserVariables = true;
             MySqlConnection connection = new MySqlConnection(connectionString.ToString());
             //TODO
-            MySqlCommand cmd = new MySqlCommand("select * from mc_rock_describe_record", connection);
+            //MySqlCommand cmd = new MySqlCommand("select * from mc_rock_describe_record", connection);
             MySqlDataAdapter adapter = new MySqlDataAdapter(select, connection);
             MySqlCommandBuilder builder = new MySqlCommandBuilder(adapter);
             connection.Open();
