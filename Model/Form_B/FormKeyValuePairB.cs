@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace Model.Form_B
 {
     public static class FormKeyValuePairB
     {
         public static Dictionary<string, string> formBDIc = new Dictionary<string, string>();
         public static Dictionary<string, string> formBNameDIc = new Dictionary<string, string>();
+        //public static Dictionary<string, string> cuttings_description_b2 = new Dictionary<string, string>();
+        
+        //public static Dictionary<string, string> descr_dilling_coring_b3 = new Dictionary<string, string>();
+        //public static Dictionary<string, string> B_6 = new Dictionary<string, string>();
         static FormKeyValuePairB()
         {
 
@@ -41,7 +44,7 @@ namespace Model.Form_B
             formBDIc.Add("B_3", "descr_dilling_coring_b3");
             formBDIc.Add("B_4", "frac_cavity_sta_b4");
             //formBDIc.Add("B_5", "");
-            formBDIc.Add("B_6", "");
+            formBDIc.Add("B_6", "wall_coring_b6");
             formBDIc.Add("B_7", "afte_gas_de_record_b7");
             formBDIc.Add("B_8", "special_cond_marking_b8");
             formBDIc.Add("B_9", "density_ana_mudston_b9");
@@ -72,7 +75,7 @@ namespace Model.Form_B
             formBDIc.Add("D_7", "statis_dirll_co_d7");
             formBDIc.Add("D_8", "sta_table_ana_samp_d8");
 
-            //
+            //岩屑描述记录
             formBNameDIc.Add("cuttings_description", "岩屑记录");
             formBNameDIc.Add("num", "序号");
             formBNameDIc.Add("horizon", "层位");
@@ -88,6 +91,371 @@ namespace Model.Form_B
             formBNameDIc.Add("flu_color", "荧光滴照颜色");
             formBNameDIc.Add("flu_dry_co", "荧光干照颜色");
             formBNameDIc.Add("flu_con_lev", "荧光对比级别");
+
+            //钻井取心描述记录
+            formBNameDIc.Add("core_num", "岩心编号");
+            formBNameDIc.Add("wear_cond", "磨损情况");
+            formBNameDIc.Add("total_leng", "累计长度");
+            formBNameDIc.Add("sample_num", "岩样编号");
+            formBNameDIc.Add("lith_name_co", "岩性定名颜色");
+            formBNameDIc.Add("lith_name_oil", "岩性定名含油级别");
+            formBNameDIc.Add("lith_name_lith", "岩性定名岩性");
+            formBNameDIc.Add("lit_des_wat", "油气水描述");
+            formBNameDIc.Add("flu_wet", "湿照颜色");
+            formBNameDIc.Add("flu_cont_le", "对比级别");
+
+            formBNameDIc.Add("measur_w_dep", "测量井深");
+
+
+            //丼壁取心
+
+            formBNameDIc.Add("well_dep", "井深");
+
+
+
+            ////缝洞统计
+            formBNameDIc.Add("time_cor", "取心筒次");
+            formBNameDIc.Add("well_sec", "井段");
+            formBNameDIc.Add("cori_num", "岩心编号");
+            formBNameDIc.Add("length", "长度");
+            formBNameDIc.Add("litho_namein", "岩性定名");
+            formBNameDIc.Add("total_num", "总条数");
+            formBNameDIc.Add("total_dens", "总密度");
+            formBNameDIc.Add("eff_seam_num", "有效缝条数");
+            formBNameDIc.Add("eff_seam_de", "有效缝密度");
+            formBNameDIc.Add("eff_seam_w_o", "有效缝宽度大于5");
+            formBNameDIc.Add("eff_seam_w_tw", "有效缝宽度在1到5之间");
+            formBNameDIc.Add("eff_seam_w_t", "有效缝宽度小于等于1");
+            formBNameDIc.Add("eff_vert_seam", "有效缝立缝");
+            formBNameDIc.Add("eff_seam_in", "有效缝斜缝");
+            formBNameDIc.Add("eff_flat_seam", "有效缝平缝");
+            formBNameDIc.Add("fill_de_eff_s", "有效缝填充程度");
+            formBNameDIc.Add("fill_de_eff_thing", "有效逢填充物");
+            formBNameDIc.Add("suture", "缝合线条数");
+            formBNameDIc.Add("lim_cave_num", "溶洞晶洞个数");
+            formBNameDIc.Add("lim_cave_de", "溶洞晶洞密度");
+            formBNameDIc.Add("cave_diam_10", "溶洞晶洞直径大于10");
+            formBNameDIc.Add("cave_diam_5_10", "5-10");
+            formBNameDIc.Add("cave_diam_5", "5");
+            formBNameDIc.Add("cave_fil", "溶洞晶洞填充物");
+            formBNameDIc.Add("cave_fil_le", "溶洞晶洞填充程度");
+            formBNameDIc.Add("plaque", "斑块数");
+            formBNameDIc.Add("air_pla", "冒气处个数");
+            formBNameDIc.Add("connect", "连通情况");
+
+            ////钻井液氯离子测定
+            //formBNameDIc.Add("num", "编号");
+            formBNameDIc.Add("samp_time_d", "月日");
+            formBNameDIc.Add("samp_time_m", "时分");
+            formBNameDIc.Add("samp_well_dep", "取样井深度");
+            formBNameDIc.Add("silver_ni_c", "硝酸银浓度当量");
+            formBNameDIc.Add("samp_v", "取样体积");
+            formBNameDIc.Add("silv_ni_q", "硝酸银滴定前量");
+            formBNameDIc.Add("silv_ni_l", "有效缝硝酸银滴定后的量");
+            formBNameDIc.Add("silv_ni_co", "硝酸银消耗的量");
+            formBNameDIc.Add("chlo_con", "氯根含量");
+            formBNameDIc.Add("density", "密度");
+            formBNameDIc.Add("viscosity", "粘度");
+            //formBNameDIc.Add("examiner", "检验人");
+
+            ////套管记录
+            formBNameDIc.Add("size", "尺寸");
+            formBNameDIc.Add("pla_pro", "产地");
+            formBNameDIc.Add("steel_gra", "钢级");
+            formBNameDIc.Add("wall_thick", "壁厚");
+            formBNameDIc.Add("s_length", "单根长");
+            formBNameDIc.Add("tol_len", "累长");
+            formBNameDIc.Add("down_dep", "下深");
+            formBNameDIc.Add("remarks", "备注");
+
+
+            ////班报之基本信息
+            formBNameDIc.Add("date", "日期");
+            formBNameDIc.Add("classes", "班次");
+            formBNameDIc.Add("watcher", "值班人");
+            formBNameDIc.Add("shift", "井深");
+            formBNameDIc.Add("footage", "进尺");
+
+            ////班报之后效气检测
+            formBNameDIc.Add("bit_position", "钻头位置");
+            formBNameDIc.Add("total_hyd_peak", "全烃峰值");
+            formBNameDIc.Add("up_speed", "上窜速度");
+            formBNameDIc.Add("slot_sur_dis", "槽面显示");
+
+            ////班报之下套管
+            formBNameDIc.Add("bushing_type", "套管类型");
+            formBNameDIc.Add("external_dia", "外径");
+            formBNameDIc.Add("steel_grade", "钢级");
+            formBNameDIc.Add("wall_th", "壁厚");
+            formBNameDIc.Add("place_origin", "产地");
+            formBNameDIc.Add("depth", "下深");
+            formBNameDIc.Add("location_choke", "阻流环位置");
+            formBNameDIc.Add("short_casing", "短套管位置");
+            formBNameDIc.Add("hanger_pos", "悬挂器位置");
+            formBNameDIc.Add("location_gra_hoop", "分级箍位置");
+            formBNameDIc.Add("join_in", "联入");
+
+            ////班报之下固井
+            formBNameDIc.Add("cement_brand", "水泥品牌");
+            formBNameDIc.Add("cement_type", "水泥类型");
+            formBNameDIc.Add("inje_vol_cem_", "水泥浆注入量");
+            formBNameDIc.Add("av_den_cem_sl", "水泥浆平均密度");
+            formBNameDIc.Add("cement_higt", "水泥反高");
+            formBNameDIc.Add("pres_test", "试压");
+            formBNameDIc.Add("displa_mud", "替泥浆量");
+            formBNameDIc.Add("lmpact_time", "碰压时间");
+            formBNameDIc.Add("impact_value", "碰压值");
+            formBNameDIc.Add("inject_amount_is_li", "隔离液注入量");
+            formBNameDIc.Add("cement_qua", "固井质量");
+
+            ////班报之下钻井复杂
+            formBNameDIc.Add("well_depth", "井深");
+            formBNameDIc.Add("time", "时间");
+            formBNameDIc.Add("stratum", "地层");
+            formBNameDIc.Add("accident_type", "事故类型");
+            formBNameDIc.Add("tream_process", "处理过程");
+            formBNameDIc.Add("release_time", "解除时间");
+
+
+            //////班报之下井壁取芯
+            formBNameDIc.Add("coring_time", "取心时间");
+            formBNameDIc.Add("coring_meth", "取心方式");
+            formBNameDIc.Add("design_num", "设计颗数");
+            formBNameDIc.Add("real_num", "实取颗数");
+            formBNameDIc.Add("core_length", "岩心长度");
+            formBNameDIc.Add("harvest_rate", "收获率");
+
+            //////班报之下钻井取芯
+            formBNameDIc.Add("tube_times", "筒次");
+            formBNameDIc.Add("coring_sect", "取心井段");
+
+
+            //////班报之钻井液性能
+            formBNameDIc.Add("type", "类型");
+            formBNameDIc.Add("water_loss", "失水");
+            formBNameDIc.Add("mud_cake", "泥饼");
+            formBNameDIc.Add("initial_cut", "初切");
+            formBNameDIc.Add("final_cut", "终切");
+            formBNameDIc.Add("sand_bearing", "含砂");
+            formBNameDIc.Add("clay_conte", "般土含量");
+            formBNameDIc.Add("fri_coe", "摩阻系数");
+            formBNameDIc.Add("300_read", "300转读数");
+            formBNameDIc.Add("600_read", "600转读数");
+            formBNameDIc.Add("hthp_w_loss", "HTHP失水");
+            formBNameDIc.Add("ph_value", "PH值");
+            formBNameDIc.Add("solid_cont", "固相含量");
+            formBNameDIc.Add("cl", "氯离子");
+            formBNameDIc.Add("total_sal", "总矿化度");
+            formBNameDIc.Add("affect_m_l_t", "影响录井处理剂");
+
+            //////班报之下钻丼参数
+            formBNameDIc.Add("wob", "钻压");
+            formBNameDIc.Add("rota_num_turn", "转盘转数");
+            formBNameDIc.Add("displact", "排量");
+            formBNameDIc.Add("mpa", "泵压");
+            formBNameDIc.Add("torque", "扭矩");
+            formBNameDIc.Add("su_weight", "悬重");
+
+
+            formBNameDIc.Add("drill_tool_s", "钻具结构");
+
+            //////班报之工程异常报告
+            formBNameDIc.Add("excep_type", "异常类型");
+            formBNameDIc.Add("adoption", "采纳情况");
+
+            //////班报之评价录井
+            //formBNameDIc.Add("mud_log_p", "时间");
+            //formBNameDIc.Add("well_secti", "井深");
+            //formBNameDIc.Add("num_ana_sam", "异常类型");
+
+            formBNameDIc.Add("mud_log_p", "录井项目");
+            formBNameDIc.Add("well_secti", "井段");
+            formBNameDIc.Add("num_ana_sam", "比例");
+
+            formBNameDIc.Add("instru_op_ca", "仪器运行及校验");
+
+            //////班报之迟到时间
+            formBNameDIc.Add("mud_logmeasur_w_depp", "测量井深");
+            formBNameDIc.Add("late_time", "迟到时间");
+
+            formBNameDIc.Add("lith_oil_", "岩性及油气水");
+
+            //////班报之试油
+            formBNameDIc.Add(" well_section", "井段");
+            formBNameDIc.Add("tool_struct", "工具结构");
+            formBNameDIc.Add("forma_press", "地层压力");
+            formBNameDIc.Add("work_fluid_type", "工作液类型");
+            formBNameDIc.Add("test", "测试工艺");
+            formBNameDIc.Add("test_location", "测试器座封位置");
+            formBNameDIc.Add("seat_seal_time", "座封时间");
+            formBNameDIc.Add("unseal_time", "解封时间");
+            formBNameDIc.Add("well_op_clos_ti", "开关井时间");
+            formBNameDIc.Add("dis_well_op", "开关井情况显示");
+            formBNameDIc.Add("quan_reco", "回收液体量");
+            formBNameDIc.Add("pre_con_daily", "初步折算流体日产量");
+            formBNameDIc.Add("fluid_pro", "流体性质");
+            formBNameDIc.Add("oil_test_con", "试油结论");
+
+            //////班报之测井
+            formBNameDIc.Add("text_dill_pro", "测井项目");
+            formBNameDIc.Add("rate1", "比例");
+            formBNameDIc.Add("well_section", "井段");
+
+            //////班报之侧斜
+            formBNameDIc.Add("depth_measur", "测斜井深");
+            formBNameDIc.Add("well_angle", "井斜角");
+            formBNameDIc.Add("azimuth", "方位角");
+
+            //////班报之钻头
+            formBNameDIc.Add("number", "序号");
+            //formBNameDIc.Add("size", "尺寸");
+            //formBNameDIc.Add("type", "类型");
+            formBNameDIc.Add("acc_footage", "累计进尺");
+            formBNameDIc.Add("cum_pure_d_t", "累计纯钻时间");
+
+
+            //////班报之钻井工况
+            //formBNameDIc.Add("time", "时间");
+            formBNameDIc.Add("brief_const", "施工简况");
+
+
+            //////B7后效气体检测
+            //formBNameDIc.Add(" date", "日期");
+            //formBNameDIc.Add("well_dep", "井深");
+
+            formBNameDIc.Add("dill_loca", "钻头位置");
+            formBNameDIc.Add("well_sta_time", "井筒静止时间");
+            formBNameDIc.Add("fil_cm", "钻井液槽面显示");
+            formBNameDIc.Add("fil_den", "钻井液密度");
+            formBNameDIc.Add("fil_vis", "钻井液粘度");
+
+            //formBNameDIc.Add("late_time", "迟到时间");
+
+            formBNameDIc.Add("q_t_s_time", "全烃出峰开始时间");
+            formBNameDIc.Add("q_t_s_val", "全烃出峰开始值");
+            formBNameDIc.Add("q_t_g_time", "全烃出峰高峰时间");
+            formBNameDIc.Add("q_t_g_val", "全烃出峰高峰值");
+            formBNameDIc.Add("q_t_l_time", "全烃出峰结束时间");
+            formBNameDIc.Add("q_t_l_val", "全烃出峰结束值");
+            formBNameDIc.Add("home_sec", "归位井段");
+            formBNameDIc.Add("up_high", "上窜高度");
+
+
+            //////B10
+            //formBNameDIc.Add(" num", "序号");
+            //formBNameDIc.Add("wall_dep", "井深");
+            formBNameDIc.Add("sam_type", "样品类型");
+            formBNameDIc.Add("cal_car_cont", "碳酸钙含量");
+            formBNameDIc.Add("con_ma_cal_car", "碳酸镁钙含量");
+            formBNameDIc.Add("other", "其他");
+
+            //////B9
+            //formBNameDIc.Add(" num", "序号");
+            //formBNameDIc.Add("horizon", "层位");
+            //formBNameDIc.Add("wall_dep", "井深");
+            //formBNameDIc.Add("lith_name", "岩性定名");
+            formBNameDIc.Add("mea_value_l_o", "测量值L1");
+            formBNameDIc.Add("mea_value_t", "测量值L2");
+            formBNameDIc.Add("mea_dn", "测量值密度");
+
+            //////B14
+            //formBNameDIc.Add(" wall_dep", "井深");
+            //formBNameDIc.Add("horizon", " 层位");
+            formBNameDIc.Add("no", "编号");
+            //formBNameDIc.Add("sam_type", "样品类型");
+            //formBNameDIc.Add("lit_name", "岩性定名");
+            formBNameDIc.Add("sam_qua", "样品质量");
+            formBNameDIc.Add("team_code", " 组分");
+            formBNameDIc.Add("peak_area", "峰面积");
+
+            //////B15同14未改
+            //formBNameDIc.Add(" wall_dep", "井深");
+            //formBNameDIc.Add("horizon", " 层位");
+            //formBNameDIc.Add("no", "编号");
+            //formBNameDIc.Add("sam_type", "样品类型");
+            //formBNameDIc.Add("lit_name", "岩性定名");
+
+            //////B19
+            //formBNameDIc.Add("num", "序号");
+            //formBNameDIc.Add("horizon", "层位");
+            //formBNameDIc.Add("wall_dep", "井深");
+            //formBNameDIc.Add("samp_qua", "样品质量");
+            formBNameDIc.Add("u", "U");
+            formBNameDIc.Add("th", " Th");
+            formBNameDIc.Add("k", "K");
+            formBNameDIc.Add("total_co_ra", "总计数率");
+            formBNameDIc.Add("total_gamma", "总伽马");
+            formBNameDIc.Add("toc", "TOC");
+
+            //////B16
+
+            formBNameDIc.Add("porosity1", "孔隙度");
+            formBNameDIc.Add("permea1", "渗透率");
+            formBNameDIc.Add("oil_satur1", " 含油饱和度");
+            formBNameDIc.Add("lipuidty", "可流动性");
+            formBNameDIc.Add("bound_fluid", "束缚流体");
+            formBNameDIc.Add("mova_wat_sat", "可动水饱和度");
+
+            //////B11
+            //formBNameDIc.Add("wall_num", "井号");
+            //formBNameDIc.Add("well_dep", "井深");
+            //formBNameDIc.Add("sam_type", "样品类型");
+            //formBNameDIc.Add("lith_name", "岩性定名");
+            formBNameDIc.Add("exc_wava", "激发波长");
+            formBNameDIc.Add("fluo_wava", " 荧光波长");
+            formBNameDIc.Add("fiuo_inten", "荧光强度");
+            formBNameDIc.Add("equ-oil_con", "相当油含量");
+            formBNameDIc.Add("level", "对比级别");
+            formBNameDIc.Add("oil_index", "油性指数");
+
+            //////B8
+            formBNameDIc.Add(" well_num", "井号");
+
+            //formBNameDIc.Add("date", "日期");
+
+            formBNameDIc.Add("well_team", "钻井队");
+            //formBNameDIc.Add("well_dep", "钻达深度");
+            formBNameDIc.Add("abno_hori", "异常层位");
+            formBNameDIc.Add("abno_st_time", "异常开始时间");
+            formBNameDIc.Add("report_time", "报告时间");
+            formBNameDIc.Add("abno_ho", "异常井段");
+            formBNameDIc.Add("abno_para_ch", "异常参数变化情况");
+            formBNameDIc.Add("ana_re_rep", "分析结果报告");
+            formBNameDIc.Add("proposal", "建议处理措施");
+            //formBNameDIc.Add("adoption", "采纳情况");
+            formBNameDIc.Add("act_res", "实际结果");
+            formBNameDIc.Add("report_com", "报告符合情况");
+            formBNameDIc.Add("mud_log_rep", "录井报告人");
+            formBNameDIc.Add("sig_dil_te", "钻井队签字");
+            formBNameDIc.Add("sig_captain", "钻井队队长签字");
+            formBNameDIc.Add("sig_geo_su", "地质监督签字");
+
+            //////B12
+            formBNameDIc.Add(" S0", " S0");
+            formBNameDIc.Add("S1", " S1");
+            formBNameDIc.Add("S2", "S2");
+            formBNameDIc.Add("S4", " S4");
+            formBNameDIc.Add("tmax", " Tmax");
+
+            //////B17
+            formBNameDIc.Add("miner_cont1", "矿物1含量");
+            formBNameDIc.Add("miner_cont2", "矿物2含量");
+
+
+            //////B18
+            formBNameDIc.Add("elem_cont1", "元素1含量");
+            formBNameDIc.Add("elem_cont2", "元素2含量");
+
+            formBNameDIc.Add("examiner", "检验人");
+
+
+
+
+
+
+
+
+
         }
 
     }

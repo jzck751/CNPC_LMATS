@@ -13,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
 namespace UIWPF.Resources.Pages
 {
     /// <summary>
@@ -25,7 +24,15 @@ namespace UIWPF.Resources.Pages
         string formKey = null;
         string formName = null;
         string formTitle = null;
-        
+        string sql;
+        string table;
+        MySqlConnectionStringBuilder connectionString = new MySqlConnectionStringBuilder();
+        public MySqlConnection connection;
+        MySqlDataAdapter adapter;
+        DataTable data;
+
+
+
         public FormPage()
         {
             InitializeComponent();
@@ -37,16 +44,48 @@ namespace UIWPF.Resources.Pages
         {
             dtGrid.Items.Clear();
         }
+        //输出函数
+        public void Database_All(MySqlConnection conn)
+        {
+            try
+            {
+                if (conn != null)
+                {
+                    conn.Open();
+                    Console.WriteLine("table" + "查询通道已打开");
+                    string select = sql;
+                    MySqlCommand command = new MySqlCommand(select, conn);
+                    adapter = new MySqlDataAdapter(command);
+                    data = new DataTable();
+                    adapter.Fill(data);
+                    dtGrid.ItemsSource = null;
+                    //dtGrid.Items.Clear();
+                    dtGrid.ItemsSource = data.DefaultView;
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+            
+        }
 
         public void loadData()
         {
 
             //dtGrid = new DataGrid();
 
-            string sql = "select * from ";
-            
+            sql = "select * from ";
+
             if (Model.Form_B.FormKeyValuePairB.formBDIc.TryGetValue(formKey, out formName))
+            {
                 sql += formName;
+                table = formName;
+            }
             else
             {
                 MessageBox.Show(formKey + " access failure.");
@@ -54,14 +93,14 @@ namespace UIWPF.Resources.Pages
             }
 
             //dt = DbManager.Ins.ExcuteDataTable(sql);
-
-            //MySqlConnectionStringBuilder connectionString = new MySqlConnectionStringBuilder();
-            //connectionString.Server = "localhost";
-            //connectionString.UserID = "root";
-            //connectionString.Password = "123456";
-            //connectionString.Database = "cnpc_lmats";
-            //connectionString.AllowUserVariables = true;
-            //MySqlConnection connection = new MySqlConnection(connectionString.ToString());
+            
+            connectionString.Server = "localhost";
+            connectionString.UserID = "root";
+            connectionString.Password = "123456";
+            connectionString.Database = "cnpc_lmats1";
+            connectionString.AllowUserVariables = true;
+            connection = new MySqlConnection(connectionString.ToString());
+            Database_All(connection);
             //MySqlCommand cmd = new MySqlCommand(sql, connection);
             //connection.Open();
             ////dt.Load(cmd.ExecuteReader());
@@ -69,25 +108,40 @@ namespace UIWPF.Resources.Pages
 
             dt = DbManager.Ins.ExcuteDataTable(sql);
 
-            dtGrid.ItemsSource = null;
-            //dtGrid.Items.Clear();
-            dtGrid.ItemsSource = dt.DefaultView;
+            //dtGrid.ItemsSource = null;
+            ////dtGrid.Items.Clear();
+            //dtGrid.ItemsSource = dt.DefaultView;
 
             string headerName = null;
             
             //update the commented form name
             //Change the header
-            if (Model.Form_B.FormKeyValuePairB.formBNameDIc.TryGetValue(formName, out formTitle))
+            if (Model.Form_B.FormKeyValuePairB.formBDIc.TryGetValue(formKey, out formTitle))
             {
-
+                
             }
+            else
+            {
+                MessageBox.Show(formKey + " naming failure.");
+                return;
+            }
+            
             foreach (var items in dtGrid.Columns)
             {
                 if (Model.Form_B.FormKeyValuePairB.formBNameDIc.TryGetValue(items.Header.ToString(), out headerName))
                 {
-                    items.Header = headerName;
+                    
                 }
+                //else if(Model.Form_B.FormKeyValuePairB.descr_dilling_coring_b3.TryGetValue(items.Header.ToString(), out headerName))
+                //{
+                    
+                //}
+                
+                //MessageBox.Show(items.Header.ToString());
+
+                items.Header = headerName;
             }
+
 
         }
 
@@ -99,9 +153,15 @@ namespace UIWPF.Resources.Pages
         public int UpdateTable()
         {
             int rows = 0;
-            //MySqlCommandBuilder buider = new MySqlCommandBuilder(adapter);
+            MySqlCommandBuilder buider = new MySqlCommandBuilder(adapter);
 
-            //rows = adapter.Update(data, table);
+            rows = adapter.Update(data);
+            if (rows != 0)
+                MessageBox.Show(table + " " + rows + "行更新成功");
+            else
+            {
+                MessageBox.Show(table  + " 更新失败！！！");
+            }
             return rows;
 
         }
