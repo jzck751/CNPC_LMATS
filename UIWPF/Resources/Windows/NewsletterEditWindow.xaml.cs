@@ -20,22 +20,19 @@ namespace UIWPF.Resources.Windows
     /// </summary>
     public partial class NewsletterEditWindow : Window
     {
-
         Pages.ShiftNewsletter PageA = new Pages.ShiftNewsletter();
         Pages.ShiftNewsletterB PageB = new Pages.ShiftNewsletterB();
         string table_num = "b1";
         string table = "b1";
-
         public NewsletterEditWindow()
         {
             InitializeComponent();
-            Page1.Navigate(new Pages.ShiftNewsletter());
-            Page2.Navigate(new Pages.ShiftNewsletterB());
+            Page1.Navigate(PageA);
+            Page2.Navigate(PageB);
         }
 
         private void Print_Click(object sender, RoutedEventArgs e)
         {
-
             try
             {
                 
@@ -54,7 +51,6 @@ namespace UIWPF.Resources.Windows
                 PageA.IsEnabled = true;
                 PageB.IsEnabled = true;
             }
-
 
         }
         public int updateCan()
