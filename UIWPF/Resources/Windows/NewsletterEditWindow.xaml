@@ -28,7 +28,7 @@
                             Style="{StaticResource MaterialDesignFlatButton}"
                             Foreground="White"
                             FontFamily="微软雅黑"/>
-                    <Button/>
+                    
                     <Button x:Name="History" Content="班报历史"
                             Style="{StaticResource MaterialDesignFlatButton}"
                             Foreground="White"
@@ -46,7 +46,7 @@
                 </ScrollViewer>
                 
             </TabItem>
-            <TabItem Header="第二页">
+            <TabItem Header="第二页(续表)">
                 <ScrollViewer>
                     <Frame Name="Page2" Background="#FFD7E4F2">
 

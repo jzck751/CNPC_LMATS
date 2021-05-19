@@ -17,15 +17,36 @@ namespace UIWPF.Resources.Windows
     /// </summary>
     public partial class NewsletterEditWindow : Window
     {
+        Pages.ShiftNewsletter PageA = new Pages.ShiftNewsletter();
+        Pages.ShiftNewsletterB PageB = new Pages.ShiftNewsletterB();
         public NewsletterEditWindow()
         {
             InitializeComponent();
-            Page1.Navigate(new Pages.ShiftNewsletter());
-            Page2.Navigate(new Pages.ShiftNewsletterB());
+            Page1.Navigate(PageA);
+            Page2.Navigate(PageB);
         }
 
         private void Print_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                PageA.IsEnabled = false;
+                PageB.IsEnabled = false;
+                PrintDialog dialog = new PrintDialog();
+                Visual visual = PageA;
+            
+                if (dialog.ShowDialog() == true)
+                {
+                    dialog.PrintVisual(PageA.printA, "Shift newsletter第一页");
+                    dialog.PrintVisual(PageB.printB, "Shift newsletter第二页");
+                
+                }
+            }
+            finally
+            {
+                PageA.IsEnabled = true;
+                PageB.IsEnabled = true;
+            }
 
         }
     }
