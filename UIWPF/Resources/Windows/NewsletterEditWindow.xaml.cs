@@ -13,24 +13,20 @@ using System.Windows.Shapes;
 namespace UIWPF.Resources.Windows
 {
     /// <summary>
-    /// SignOutSaveCheck.xaml 的交互逻辑
+    /// NewsletterEditWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class SignOutSaveCheck : Window
+    public partial class NewsletterEditWindow : Window
     {
-        public SignOutSaveCheck()
+        public NewsletterEditWindow()
         {
             InitializeComponent();
-            //this.Owner = Application.Current.MainWindow;
+            Page1.Navigate(new Pages.ShiftNewsletter());
+            Page2.Navigate(new Pages.ShiftNewsletterB());
         }
 
-        private void closeWithSave(object sender, RoutedEventArgs e)
+        private void Print_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
-        }
 
-        private void cancel_Click(object sender,RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }

@@ -13,24 +13,13 @@ using System.Windows.Shapes;
 namespace UIWPF.Resources.Windows
 {
     /// <summary>
-    /// SignOutSaveCheck.xaml 的交互逻辑
+    /// PrintDialog.xaml 的交互逻辑
     /// </summary>
-    public partial class SignOutSaveCheck : Window
+    public partial class PrintDialog : Window
     {
-        public SignOutSaveCheck()
+        public PrintDialog()
         {
             InitializeComponent();
-            //this.Owner = Application.Current.MainWindow;
-        }
-
-        private void closeWithSave(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-
-        private void cancel_Click(object sender,RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }
