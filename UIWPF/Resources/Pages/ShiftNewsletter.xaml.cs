@@ -89,12 +89,20 @@ namespace UIWPF.Resources.Pages
                 "values(date(sysdate()), @shift, @work, @begin, @finally, @poor)";
             List<MySqlParameter> Par = new List<MySqlParameter>();
             //Par.Add(new MySqlParameter("@time", dateBox.Text));
-            Par.Add(new MySqlParameter("@shift", shiftBox.Text));
-            Par.Add(new MySqlParameter("@work", workBox.Text));
-            Par.Add(new MySqlParameter("@begin", double.Parse(beg_depthBox.Text)));
-            Par.Add(new MySqlParameter("@finally", double.Parse(fin_depthBox.Text)));
+            try
+            {
+                Par.Add(new MySqlParameter("@shift", shiftBox.Text));
+                Par.Add(new MySqlParameter("@work", workBox.Text));
+                Par.Add(new MySqlParameter("@begin", double.Parse(beg_depthBox.Text)));
+                Par.Add(new MySqlParameter("@finally", double.Parse(fin_depthBox.Text)));
 
-            Par.Add(new MySqlParameter("@poor", double.Parse(poorBox.Text)));
+                Par.Add(new MySqlParameter("@poor", double.Parse(poorBox.Text)));
+            }
+            catch
+            {
+                
+            }
+            
             rows = DbManager.Ins.ExecuteNonquery(sql, Par.ToArray());
             return rows;
         }
@@ -203,7 +211,7 @@ namespace UIWPF.Resources.Pages
                 catch (Exception)
                 {
 
-                    throw;
+                    MessageBox.Show("请按顺序输入。");
                 }
             }
 

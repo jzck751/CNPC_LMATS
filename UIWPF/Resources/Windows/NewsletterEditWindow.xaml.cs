@@ -37,8 +37,7 @@ namespace UIWPF.Resources.Windows
             {
                 
                 PrintDialog dialog = new PrintDialog();
-                Visual visual = PageA;
-            
+
                 if (dialog.ShowDialog() == true)
                 {
                     dialog.PrintVisual(PageA.printA, "Shift newsletter第一页");
@@ -62,32 +61,42 @@ namespace UIWPF.Resources.Windows
         }
         private void Push_Click(object sender, RoutedEventArgs e)
         {
-            List<MySqlParameter> par_add = new List<MySqlParameter>();
-            //table = "drilling_tool_structure_b1";
-            par_add.Add(new MySqlParameter("@table", table));
-            string sql = "select * from table_name where table_name = @table";
-            DataTable dt = DbManager.Ins.ExcuteDataTable(sql, par_add.ToArray());
-            DataRow[] dtrows = dt.Select();
-            //MessageBox.Show(table + ": ");
-            int can = (int)dtrows[0][1];
-            //MessageBox.Show(table + ": " + can);
-            if (can == 1)
+            try
             {
-                if (table_num == "b1")
+                Push.IsEnabled = false;
+                List<MySqlParameter> par_add = new List<MySqlParameter>();
+                //table = "drilling_tool_structure_b1";
+                par_add.Add(new MySqlParameter("@table", table));
+                string sql = "select * from table_name where table_name = @table";
+                DataTable dt = DbManager.Ins.ExcuteDataTable(sql, par_add.ToArray());
+                DataRow[] dtrows = dt.Select();
+                //MessageBox.Show(table + ": ");
+                int can = (int)dtrows[0][1];
+                //MessageBox.Show(table + ": " + can);
+                if (can == 1)
                 {
-                    PageA.update_B();
+                    if (table_num == "b1")
+                    {
+                        PageA.update_B();
 
-                    //提交后关闭编辑权限
-                    updateCan();
-                    Push.IsEnabled = false;
+                        //提交后关闭编辑权限
+                        updateCan();
+                        
+                    }
+
                 }
+                else
+                {
+                    MessageBox.Show("保存失败！！\n" + table_num + "表已提交，不可更改！");
 
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show("保存失败！！\n" + table_num + "表已提交，不可更改！");
+                MessageBox.Show("提交有误，请确认表单内容是否正确。");
                 Push.IsEnabled = true;
             }
+            
         }
     }
 }
