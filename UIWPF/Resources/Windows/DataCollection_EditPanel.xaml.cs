@@ -30,24 +30,25 @@ namespace UIWPF.Resources.Windows
 
         private void save_Click(object sender, RoutedEventArgs e)
         {
-            string select = "select * from ";
-            select += FormPage.getFormName();
-            MySqlConnectionStringBuilder connectionString = new MySqlConnectionStringBuilder();
-            connectionString.Server = "localhost";
-            connectionString.UserID = "root";
-            connectionString.Password = "123456";
-            connectionString.Database = "cnpc_lmats1";
-            connectionString.AllowUserVariables = true;
-            MySqlConnection connection = new MySqlConnection(connectionString.ToString());
-            //TODO
+            //string select = "select * from ";
+            //select += FormPage.getFormName();
+            //MySqlConnectionStringBuilder connectionString = new MySqlConnectionStringBuilder();
+            //connectionString.Server = "localhost";
+            //connectionString.UserID = "root";
+            //connectionString.Password = "123456";
+            //connectionString.Database = "cnpc_lmats1";
+            //connectionString.AllowUserVariables = true;
+            //MySqlConnection connection = new MySqlConnection(connectionString.ToString());
+            ////TODO
             //MySqlCommand cmd = new MySqlCommand("select * from mc_rock_describe_record", connection);
-            MySqlDataAdapter adapter = new MySqlDataAdapter(select, connection);
-            MySqlCommandBuilder builder = new MySqlCommandBuilder(adapter);
-            connection.Open();
-            adapter.Update(FormPage.GetData());
-            connection.Close();
-            //int rows = FormPage.UpdateTable();
-            //Console.WriteLine(rows);
+            //MySqlDataAdapter adapter = new MySqlDataAdapter(select, connection);
+            //MySqlCommandBuilder builder = new MySqlCommandBuilder(adapter);
+            //connection.Open();
+            //adapter.Update(FormPage.GetData());
+            //connection.Close();
+            int rows = FormPage.UpdateTable();
+            Console.WriteLine(rows);
+
         }
 
         private void formSwitch_Click(object sender, RoutedEventArgs e)
