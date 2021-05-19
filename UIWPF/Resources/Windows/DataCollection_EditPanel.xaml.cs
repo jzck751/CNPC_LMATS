@@ -46,7 +46,8 @@ namespace UIWPF.Resources.Windows
             connection.Open();
             adapter.Update(FormPage.GetData());
             connection.Close();
-            
+            //int rows = FormPage.UpdateTable();
+            //Console.WriteLine(rows);
         }
 
         private void formSwitch_Click(object sender, RoutedEventArgs e)
