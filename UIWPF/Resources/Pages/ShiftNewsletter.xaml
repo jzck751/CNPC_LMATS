@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:UIWPF.Resources.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="1122.52" d:DesignWidth="793.70"
+      Height="1122.52" Width="793.70"
       Title="ShiftNewsletter"
       Background="White">
 

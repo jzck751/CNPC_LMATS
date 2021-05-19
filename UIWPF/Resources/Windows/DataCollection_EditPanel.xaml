@@ -132,12 +132,14 @@
                             <StackPanel Orientation="Horizontal">
                                 <Label Content="&#xE74E;"
                                        FontFamily="Segoe MDL2 Assets"
-                                       Foreground="White"/>
+                                       Foreground="White"
+                                       Margin="-10,0,0,0"/>
                                 <ContentPresenter Content="保存"/>
                             </StackPanel>
                         </MenuItem.Header>
 
                     </MenuItem>
+                    
                     <Separator/>
                     <MenuItem Header="导入" Height="20">
                         <MenuItem Header="随钻导入"/>
@@ -165,6 +167,8 @@
 
                 </MenuItem>
                 <MenuItem Header="录井班报" Height="20" Foreground="White" FontSize="14">
+                    <MenuItem Header="录井班报编辑" Height="20" Click="newsletter_Click"/>
+                    <Separator/>
                     <MenuItem Header="班报基本数据" Name="B_1_1" Height="20" Click="formSwitch_Click"/>
                     <MenuItem Header="钻井工况" Name="B_1_3" Height="20" Click="formSwitch_Click"/>
                     <MenuItem Header="钻头数据" Name="B_1_4" Height="20" Click="formSwitch_Click"/>

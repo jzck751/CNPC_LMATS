@@ -20,6 +20,7 @@ namespace UIWPF.Resources.Windows
     {
         //Pages.Form_B.B_2 b_2 = new Pages.Form_B.B_2();
         Pages.FormPage FormPage = new Pages.FormPage();
+        Windows.NewsletterEditWindow newsletter = new NewsletterEditWindow();
 
         public DataCollection_EditPanel()
         {
@@ -181,5 +182,9 @@ namespace UIWPF.Resources.Windows
             }
         }
 
+        private void newsletter_Click(object sender, RoutedEventArgs e)
+        {
+            newsletter.Show();
+        }
     }
 }

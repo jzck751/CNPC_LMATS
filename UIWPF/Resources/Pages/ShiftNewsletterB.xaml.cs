@@ -8,16 +8,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace UIWPF.Resources.Windows
+namespace UIWPF.Resources.Pages
 {
     /// <summary>
-    /// ShiftNewsletter.xaml 的交互逻辑
+    /// ShiftNewsletterB.xaml 的交互逻辑
     /// </summary>
-    public partial class ShiftNewsletter : Window
+    public partial class ShiftNewsletterB : Page
     {
-        public ShiftNewsletter()
+        public ShiftNewsletterB()
         {
             InitializeComponent();
         }
