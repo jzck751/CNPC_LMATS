@@ -5,11 +5,11 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:UIWPF.Resources.Pages"
       mc:Ignorable="d" 
-      Height="1104" Width="768"
+      Height="1122.52" Width="793.70"
       Title="ShiftNewsletter"
       Background="White">
 
-    <Grid x:Name="printA">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="40"/>
             <ColumnDefinition Width="*"/>
@@ -56,8 +56,8 @@
         </Grid.RowDefinitions>
         <Border Grid.ColumnSpan="9" Margin="20">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBox x:Name="numTitle" Width="100" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Center"
-                         VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" Cursor="IBeam"/>
+                <TextBox x:Name="numTitle" Width="100" HorizontalAlignment="Center"
+                         VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center"/>
                 <TextBlock Text="井录井班报" VerticalAlignment="Bottom"
                            TextAlignment="Center"/>
             </StackPanel>
@@ -532,4 +532,3 @@
         </Border>
     </Grid>
 </Page>
-

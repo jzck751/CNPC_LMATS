@@ -13,20 +13,13 @@ using System.Windows.Shapes;
 namespace UIWPF.Resources.Windows
 {
     /// <summary>
-    /// NewsletterEditWindow.xaml 的交互逻辑
+    /// PrintDialog.xaml 的交互逻辑
     /// </summary>
-    public partial class NewsletterEditWindow : Window
+    public partial class PrintDialog : Window
     {
-        public NewsletterEditWindow()
+        public PrintDialog()
         {
             InitializeComponent();
-            Page1.Navigate(new Pages.ShiftNewsletter());
-            Page2.Navigate(new Pages.ShiftNewsletterB());
-        }
-
-        private void Print_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
