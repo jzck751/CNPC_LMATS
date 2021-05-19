@@ -33,7 +33,7 @@ namespace Model.Form_B
             formBDIc.Add("B_1_13", "track_b1");
             formBDIc.Add("B_1_14", "drilling_coring_b1");
             formBDIc.Add("B_1_15", "coring_well_wall_b1");
-            formBDIc.Add("B_1_16", "afte_gas_de_record_b1");
+            formBDIc.Add("B_1_16", "aftereffect_gas_dete_b1");
             formBDIc.Add("B_1_17", "complexity_treatment_b1");
             formBDIc.Add("B_1_18", "text_well_b1");
             formBDIc.Add("B_1_19", "casing_running_b1");
@@ -52,10 +52,10 @@ namespace Model.Form_B
             formBDIc.Add("B_11", "quanti_flu_logging_b11");
             formBDIc.Add("B_12", "therm_detion_rock_b12");
             formBDIc.Add("B_13", "");
-            formBDIc.Add("B_14", "gas _chroa__hydca_rocks_b14");
+            formBDIc.Add("B_14", "gas_chroa__hydca_rocks_b14");
             formBDIc.Add("B_15", "light_hydr_logging_b15");
             formBDIc.Add("B_16", "nuc_mag_reson_b16");
-            formBDIc.Add("B_17", "x-ray_diff_logging_b17");
+            formBDIc.Add("B_17", "x_ray_diff_logging_b17");
             formBDIc.Add("B_18", "x_ray_fiuore_logging_b18");
             formBDIc.Add("B_19", "natural_gamma_spe_log_b19");
             formBDIc.Add("B_20", "csaing_record_b20");
@@ -239,8 +239,8 @@ namespace Model.Form_B
             formBNameDIc.Add("sand_bearing", "含砂");
             formBNameDIc.Add("clay_conte", "般土含量");
             formBNameDIc.Add("fri_coe", "摩阻系数");
-            formBNameDIc.Add("300_read", "300转读数");
-            formBNameDIc.Add("600_read", "600转读数");
+            formBNameDIc.Add("read_300", "300转读数");
+            formBNameDIc.Add("read_600", "600转读数");
             formBNameDIc.Add("hthp_w_loss", "HTHP失水");
             formBNameDIc.Add("ph_value", "PH值");
             formBNameDIc.Add("solid_cont", "固相含量");
