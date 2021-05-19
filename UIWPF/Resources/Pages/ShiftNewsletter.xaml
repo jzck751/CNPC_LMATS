@@ -9,7 +9,7 @@
       Title="ShiftNewsletter"
       Background="White">
 
-    <Grid x:Name="printA">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="40"/>
             <ColumnDefinition Width="*"/>
@@ -56,8 +56,10 @@
         </Grid.RowDefinitions>
         <Border Grid.ColumnSpan="9" Margin="20">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBox x:Name="numTitle" Width="100" HorizontalAlignment="Center"/>
-                <TextBlock Text="井录井班报" VerticalAlignment="Bottom"/>
+                <TextBox x:Name="numTitle" Width="100" HorizontalAlignment="Center"
+                         VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center"/>
+                <TextBlock Text="井录井班报" VerticalAlignment="Bottom"
+                           TextAlignment="Center"/>
             </StackPanel>
         </Border>
         <Border BorderBrush="Black"  Grid.Column="1"
@@ -598,3 +600,4 @@
         </Border>
     </Grid>
 </Page>
+
